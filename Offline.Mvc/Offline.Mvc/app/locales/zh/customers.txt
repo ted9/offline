@@ -1,0 +1,50 @@
+{
+"alertOpportunities" : {"pageTitle":"点Alert Opportunities"
+},
+"componentForecast" : {"changeoutReason":"点Input Changeout Reason",
+"confirmationMessage":"点Your changes have not been saved - are you sure you want to continue?",
+"customerContactedComments":"点Input Customer Contacted comment",
+"customerContactedDate":"点Select Contacted Date",
+"customerContactedEmployee":"点Select Contacted Employee",
+"editComponentForecast":"点Edit Component Forecast",
+"failValidation":"点Please fill in all mandatory fields",
+"nextPartNumberRequired":"点Select a Part",
+"pageTitle":"点Component Forecast",
+"partClassification":"点Select Part Classification",
+"poNumber":"点Input PO Number",
+"reviewStatus":"点Select Review Status",
+"salesLostReason":"点Select Lost Reason",
+"salesResponsibility":"点Select Sales Responsibility",
+"salesStatus":"点Select Sales Status",
+"salesStatusComments":"点Input Sales Status Comment",
+"saveAndClose":"点Save",
+"saveConfirmationMessage":"点<p>This will create a component changeout record. It may take several minutes for AMT to calculate and update the component forecast.</p><p>Do you want to proceed and create the component changeout record?</p>",
+"updateComponentForecast":"点Update Component Forecast",
+"updateSuccessful":"点Component Forecast record saved"
+},
+"marketAnalysis" : {"12m":"点12M: ",
+"6m":"点6M: ",
+"pageTitle":"点Market Analysis"
+},
+"measurement" : {"hasNoData":"点There are no Measurement Readings",
+"navPageTitle":"点-2146826259",
+"pageTitle":"点Measurements",
+"recordPageTitle":"点Record Measurement"
+},
+"menu" : {"AlertOpportunities":"点Alert Opportunities",
+"ComponentForecast":"点Componenet Forecast",
+"MarketAnalysis":"点Market Analysis",
+"OverdueOpportunities":"点Overdue Opportunities",
+"pageTitle":"点Menu"
+},
+"overdueOpportunities" : {"pageTitle":"点Overdue Opportunities"
+},
+"selectCustomer" : {"pageTitle":"点Select a Customer",
+"salesForecast":"点Sales Forecast: ",
+"screenTitle":"点Customers",
+"title":"点Customers"
+},
+"viewDefects" : {"hasNoData":"点There are no Defects",
+"pageTitle":"点Defects"
+}
+}

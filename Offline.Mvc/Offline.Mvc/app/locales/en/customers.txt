@@ -1,0 +1,50 @@
+{
+"alertOpportunities" : {"pageTitle":"Alert Opportunities"
+},
+"componentForecast" : {"changeoutReason":"Input Changeout Reason",
+"confirmationMessage":"Your changes have not been saved - are you sure you want to continue?",
+"customerContactedComments":"Input Customer Contacted comment",
+"customerContactedDate":"Select Contacted Date",
+"customerContactedEmployee":"Select Contacted Employee",
+"editComponentForecast":"Edit Component Forecast",
+"failValidation":"Please fill in all mandatory fields",
+"nextPartNumberRequired":"Select a Part",
+"pageTitle":"Component Forecast",
+"partClassification":"Select Part Classification",
+"poNumber":"Input PO Number",
+"reviewStatus":"Select Review Status",
+"salesLostReason":"Select Lost Reason",
+"salesResponsibility":"Select Sales Responsibility",
+"salesStatus":"Select Sales Status",
+"salesStatusComments":"Input Sales Status Comment",
+"saveAndClose":"Save",
+"saveConfirmationMessage":"<p>This will create a component changeout record. It may take several minutes for AMT to calculate and update the component forecast.</p><p>Do you want to proceed and create the component changeout record?</p>",
+"updateComponentForecast":"Update Component Forecast",
+"updateSuccessful":"Component Forecast record saved"
+},
+"marketAnalysis" : {"12m":"12M: ",
+"6m":"6M: ",
+"pageTitle":"Market Analysis"
+},
+"measurement" : {"hasNoData":"There are no Measurement Readings",
+"navPageTitle":"-2146826259",
+"pageTitle":"Measurements",
+"recordPageTitle":"Record Measurement"
+},
+"menu" : {"AlertOpportunities":"Alert Opportunities",
+"ComponentForecast":"Componenet Forecast",
+"MarketAnalysis":"Market Analysis",
+"OverdueOpportunities":"Overdue Opportunities",
+"pageTitle":"Menu"
+},
+"overdueOpportunities" : {"pageTitle":"Overdue Opportunities"
+},
+"selectCustomer" : {"pageTitle":"Select a Customer",
+"salesForecast":"Sales Forecast: ",
+"screenTitle":"Customers",
+"title":"Customers"
+},
+"viewDefects" : {"hasNoData":"There are no Defects",
+"pageTitle":"Defects"
+}
+}

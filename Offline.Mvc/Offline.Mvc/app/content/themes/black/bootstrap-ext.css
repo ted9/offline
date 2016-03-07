@@ -1,0 +1,17 @@
+﻿/*Buttons*/
+.btn {
+    min-width: 115px;
+    font-size: 13px;
+    height: 30px;
+}
+
+@media(max-width:640px) {
+    .btn {
+        min-width: 65px;
+    }
+}
+.modal-dialog .btn {
+    min-width: 80px !important;
+}
+
+/*End of buttons*/

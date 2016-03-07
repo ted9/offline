@@ -1,0 +1,14 @@
+{
+"assetPerformance" : {},
+"assetPerformanceTitle" : {"assetPerformance_pageTitle":"点Asset Performance"
+},
+"menu" : {"assetPerformance":"点Asset Performance",
+"availability":"点Availability",
+"costs":"点Costs",
+"menu_pageTitle":"点Menu",
+"reliability":"点Reliability",
+"utilisationAnnualised":"点Utilisation (Annualised)"
+},
+"selectSite" : {"selectSite_pageTitle":"点Select Site"
+}
+}

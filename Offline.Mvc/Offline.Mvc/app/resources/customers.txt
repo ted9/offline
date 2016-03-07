@@ -1,0 +1,83 @@
+{
+"componentForecast" : {"changeoutReason":"Input Changeout Reason",
+"confirmationMessage":"Your changes have not been saved - are you sure you want to continue?",
+"customerContactedComments":"Input Customer Contacted comment",
+"customerContactedDate":"Select Contacted Date",
+"customerContactedEmployee":"Select Contacted Employee",
+"editComponentForecast":"Edit Component Forecast",
+"failValidation":"Please fill in all mandatory fields",
+"nextPartNumberRequired":"Select a Part",
+"pageTitle":"Component Forecast",
+"partClassification":"Select Part Classification",
+"poNumber":"Input PO Number",
+"reviewStatus":"Select Review Status",
+"salesLostReason":"Select Lost Reason",
+"salesResponsibility":"Select Sales Responsibility",
+"salesStatus":"Select Sales Status",
+"salesStatusComments":"Input Sales Status Comment",
+"saveAndClose":"Save",
+"saveConfirmationMessage":"<p>This will create a component changeout record. It may take several minutes for AMT to calculate and update the component forecast.</p><p>Do you want to proceed and create the component changeout record?</p>",
+"updateComponentForecast":"Update Component Forecast",
+"updateSuccessful":"Component Forecast record saved"
+},
+"alertOpportunities" : {"pageTitle":"Alert Opportunities"
+},
+"marketAnalysis" : {"12m":"12M: ",
+"6m":"6M: ",
+"pageTitle":"Market Analysis"
+},
+"measurement" : {"hasNoData":"There are no Measurement Readings",
+"navPageTitle":"#NAME?",
+"pageTitle":"Measurements",
+"recordPageTitle":"Record Measurement"
+},
+"menu" : {"pageTitle":"Menu"
+},
+"overdueOpportunities" : {"pageTitle":"Overdue Opportunities"
+},
+"viewDefects" : {"hasNoData":"There are no Defects",
+"pageTitle":"Defects"
+}
+,
+"tour" : {"alertOpportunities" : {"step1Content":"The Health indicator",
+"step2Content":"The Equipment code",
+"step3Content":"The Strategy Task",
+"step4Content":"The amount number (M stand for Milion"
+},
+"componentForecast" : {"step1Content":"The Health indicator",
+"step2Content":"The Equipment code",
+"step3Content":"The Strategy Task",
+"step4Content":"The amount number (M stand for Milion"
+},
+"marketAnalysisItem" : {"step1Content":"This shows the Forecasted Potential split by Major Commodity Code"
+},
+"marketAnalysis" : {"step1Content":"Customer Name",
+"step2Content":"GE: The Potential Forecast for this Market Analysis",
+"step3Content":"The Period",
+"step4Content":"The total amount",
+"step5Content":"The  %",
+"step6Content":"The Forecasted Sales",
+"step7Content":"The Forecasted Opportunity",
+"step8Content":"The Actual Market Share",
+"step9Content":"This KPI shows the trend (can be up, down or no change)"
+},
+"menu" : {"step1Content":"Analyse parts and service market share",
+"step2Content":"Forecast Component change-outs that require actioning",
+"step3Content":"All Forecast Component change",
+"step4Content":"Analyse Component change-outs that are overdue"
+},
+"overdueOpportunities" : {"step1Content":"The Health indicator",
+"step2Content":"The Equipment code",
+"step3Content":"The Strategy Task",
+"step4Content":"The amount number (M stand for Milion"
+},
+"selectCustomer" : {"step1Content":"Tap here to go back to the Dashboard",
+"step2Content":"Tap here to go back to the previous screen",
+"step3Content":"Tap here to filter the information that is shown here",
+"step4Content":"Customer Name",
+"step5Content":"The total Sales Forecast amount for this Customer (M stand for Milion",
+"step6Content":"The number of Equipment that this Customer has",
+"step7Content":"Tap anywhere on this row to select this Customer"
+}
+}
+}

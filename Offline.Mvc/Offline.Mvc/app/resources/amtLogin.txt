@@ -1,0 +1,13 @@
+{
+"amtLogin" : {"invalidPasswordOnly":"Password was not recognised",
+"invalidUsernameOnly":"Please enter a valid Username",
+"invalidUsernameOrPassword":"Username and Password not recognised",
+"leaveBlankUsernameOrPassword":"Please enter your Username and Password",
+"loading":"Loading...",
+"login":"Login",
+"pageTitle":"Welcome to AMT Mobile",
+"password":"Password",
+"rememberMeMsg":"Keep me logged in",
+"userName":"Username"
+}
+}

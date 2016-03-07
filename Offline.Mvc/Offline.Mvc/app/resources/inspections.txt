@@ -1,0 +1,31 @@
+{
+"addOrEditDefect" : {"AddingPageTitle":"Add New Defect",
+"confirmationExitPage":"Your changes have not been saved - are you sure you want to continue?",
+"EditingPageTitle":"Edit Defect"
+},
+"employeeLogin" : {"pageTitle":"Employee Login"
+},
+"inspectionFeedback" : {"pageTitle":"Inspection Feedback"
+},
+"inspectionHeader" : {"pageTitle":"Inspection Header"
+},
+"inspectionSummary" : {"pageTitle":"Inspection Summary"
+},
+"measurement" : {"hasNoData":"There are no Measurement Readings",
+"navPageTitle":"#NAME?",
+"pageTitle":"Measurements",
+"recordPageTitle":"Record Measurement"
+},
+"selectAsset" : {"pageTitle":"Select Asset"
+},
+"selectInspection" : {"pageTitle":"Select Inspection"
+},
+"selectSite" : {"pageTitle":"Select Site"
+},
+"viewDefects" : {"hasNoData":"There are no Defects",
+"pageTitle":"Defects"
+},
+"viewUsages" : {"hasNoData":"There are no Usage Readings",
+"pageTitle":"Usages"
+}
+}

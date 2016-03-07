@@ -1,0 +1,14 @@
+{
+"assetPerformance" : {},
+"assetPerformanceTitle" : {"assetPerformance_pageTitle":"Asset Performance"
+},
+"menu" : {"assetPerformance":"Asset Performance",
+"availability":"Availability",
+"costs":"Costs",
+"menu_pageTitle":"Menu",
+"reliability":"Reliability",
+"utilisationAnnualised":"Utilisation (Annualised)"
+},
+"selectSite" : {"selectSite_pageTitle":"Select Site"
+}
+}

@@ -1,0 +1,33 @@
+{
+"about" : {"amtMobileSection":"点AMT Mobile",
+"appVersion":"点App Version",
+"buildDate":"点Build Date",
+"disableAdministratorTourStatus":"点Tutorial for Administrator is turned off",
+"disableCustomersTourStatus":"点Tutorial for Customer is turned off",
+"disableFleetStatisticsTourStatus":"点Tutorial for Fleet Statistics is turned off",
+"disableInspectionsTourStatus":"点Tutorial for Inspections is turned off",
+"disableQuoterTourStatus":"点Tutorial for Quoter is turned off",
+"disableSupervisorTourStatus":"点Tutorial for Supervisor is turned off",
+"disableTimesheetTourStatus":"点Tutorial for Timesheet is turned off",
+"disableWorkbenchTourStatus":"点Tutorial for Workbench is turned off",
+"enableAdministratorTourStatus":"点Tutorial for Administrator will be shown the next time",
+"enableCustomersTourStatus":"点Tutorial for Customer will be shown the next time",
+"enableFleetStatisticsTourStatus":"点Tutorial for Fleet Statistics will be shown the next time",
+"enableInspectionsTourStatus":"点Tutorial for Inspections will be shown the next time",
+"enableQuoterTourStatus":"点Tutorial for Quoter will be shown the next time",
+"enableSupervisorTourStatus":"点Tutorial for Supervisor will be shown the next time",
+"enableTimesheetTourStatus":"点Tutorial for Timesheet will be shown the next time",
+"enableWorkbenchTourStatus":"点Tutorial for Workbench will be shown the next time",
+"isolutionSection":"点iSolutions",
+"iSolutionsWebsite":"点iSolutions Website",
+"legalAndPrivacy":"点Legal & Privacy",
+"pageTitle":"点About",
+"pageTitle1":"点Legal & Privacy",
+"shareViaEmail":"点Share via Email",
+"tourHelp":"点Tutorials",
+"tourHelpTitleHint":"点Show help for this module",
+"youTubeTrainingMaterials":"点YouTube Training Materials"
+},
+"privacy" : {"pageTitle":"点Legal & Privacy"
+}
+}

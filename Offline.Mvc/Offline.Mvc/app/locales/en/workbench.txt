@@ -1,0 +1,107 @@
+{
+"addOrEditDefect" : {"AddingPageTitle":"Add New Defect",
+"confirmationExitPage":"Your changes have not been saved - are you sure you want to continue?",
+"EditingPageTitle":"Edit Defect"
+},
+"addOrEditNotification" : {"addNotification":"Add New Notification",
+"addNotificationSuccessful":"Notification added successfully",
+"asset":"Asset",
+"componentCode":"Component Code",
+"confirmationMessage":"Your changes have not been saved - are you sure you want to continue?",
+"editNotification":"Edit Notification",
+"failValidation":"Please fill in all mandatory fields",
+"jobCode":"Job Code",
+"modifierCode":"Modifier Code",
+"notificationTitle":"Notification Title",
+"raisedBy":"Raised By",
+"raisedByDescription":"Raised By",
+"raisedComment":"Raised Comments",
+"raisedCommentDesription":"Describe Raised Comments",
+"rating":"Rating",
+"repairInstruction":"Repair Instructions",
+"repairInstructionDesription":"Describe Repair Instructions",
+"selectAsset":"Select Asset",
+"selectComponentCode":"Select Component Code",
+"selectJobCode":"Select Job Code",
+"selectModifierCode":"Select Modifier Code",
+"selectRaisedBy":"Raised By",
+"selectRating":"Select Rating",
+"selectTaskType":"Select Task Type",
+"taskType":"Task Type",
+"title":"Title",
+"updateNotificationSuccessful":"Notification saved"
+},
+"employeeLogin" : {"pageTitle":"Employee Login"
+},
+"inspectionFeedback" : {"pageTitle":"Inspection Feedback"
+},
+"inspectionHeader" : {"pageTitle":"Inspection"
+},
+"inspectionInstruction" : {"pageTitle":"Inspection Instructions"
+},
+"inspectionSummary" : {"pageTitle":"Inspection Summary"
+},
+"measurement" : {"hasNoData":"There are no Measurement Readings",
+"navPageTitle":"-2146826259",
+"pageTitle":"Measurements",
+"recordPageTitle":"Record Measurement"
+},
+"menu" : {"Inspections":"Inspections",
+"StatutoryCompliance":"Statutory Compliance"
+},
+"notification" : {"addNotification":"Add New Notification",
+"asset":"Asset",
+"assetPlaceHolder":"Select Assets",
+"assignTo":"Assign To",
+"assignToMobile":"Assign To:",
+"assignToPlaceHolder":"Select Assign To",
+"endDate":"End Date",
+"fleet":"Fleet",
+"fleetPlaceHolder":"Select Fleets",
+"from":"From",
+"hasNoData":"There are no Notifications",
+"pageTitle":"Notifications",
+"rating":"Rating",
+"ratingPlaceHolder":"Select Ratings",
+"refine":"Refine",
+"saveAndClose":"Save",
+"startDate":"Start Date",
+"status":"Status",
+"statusMobile":"Status:",
+"statusPlaceHolder":"Select Status",
+"title":"Title",
+"to":"To",
+"workOrderStatus":"Workorder Status",
+"workOrderstatusPlaceHolder":"Select Work Order Status"
+},
+"performInspection" : {"hasNoData":"There are no Inspection"
+},
+"selectAsset" : {"pageTitle":"Select Asset"
+},
+"selectInspection" : {"pageTitle":"Select Inspection"
+},
+"selectSite" : {"pageTitle":"Select Site"
+},
+"statutoryCompliance" : {"branch":"Branch",
+"branchPlaceHolder":"Select Branches",
+"equipment":"Asset",
+"fleet":"Fleet",
+"fleetPlaceHolder":"Select Fleets",
+"hasNoData":"There are no Statutory Compliances records",
+"lastPerformed":"Last Performed",
+"lastWorkorder":"Last Workorder",
+"nextDue":"Next Due",
+"pageTitle":"Statutory Compliance",
+"strategyTask":"Strategy Task",
+"strategyTaskPlaceHolder":"Strategy Tasks"
+},
+"viewDefects" : {"hasNoData":"There are no Defects",
+"pageTitle":"Defects"
+},
+"viewUsages" : {"hasNoData":"There are no Usage Readings",
+"pageTitle":"Usages"
+},
+"workordersAuthorization" : {"hasNoData":"There are no Authorise Workorders",
+"pageTitle":"Authorise Workorders"
+}
+}

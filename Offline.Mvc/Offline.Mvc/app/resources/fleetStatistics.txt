@@ -1,0 +1,108 @@
+{
+"assetPerformance" : {"availability" : {"hasNoData":"There are no Availabilities",
+"pageTitle":"Availability",
+"pageTitleByFleet":"Availability by Fleet",
+"pageTitleBySite":"Availability by Site"
+},
+"costs" : {"hasNoData":"There are no Costs",
+"pageTitle":"Costs",
+"pageTitleByFleet":"Costs by Fleet",
+"pageTitleBySite":"Costs by Site"
+},
+"reliability" : {"hasNoData":"There are no Reliability",
+"pageTitle":"Reliability",
+"pageTitleByFleet":"Reliability by Fleet",
+"pageTitleBySite":"Reliability by Site"
+},
+"utilisation" : {"hasNoData":"There are no Utilisations",
+"pageTitle":"Utilisation (Annualised)",
+"pageTitleByFleet":"Utilisation (Annualised) by Fleet",
+"pageTitleBySite":"Utilisation (Annualised) by Site"
+}
+},
+"assetPerformanceTitle" : {"assetPerformance_pageTitle":"Asset Performance"
+},
+"menu" : {"menu_pageTitle":"Menu"
+},
+"tour" : {"assetPerformance" : {"step1Content":"Tap anywhere on this row to go next to the Availability screen",
+"step2Content":"Tap anywhere on this row to go next to the Reliability screen",
+"step3Content":"Tap anywhere on this row to go next to the Utilisation (Annualised) screen",
+"step4Content":"Tap anywhere on this row to go next to the Costs screen"
+},
+"availabilityAssets" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Asset Name",
+"step3Content":"The availability for the asset's life to date (percentage)",
+"step4Content":"The availability for the asset from the Start Date to now",
+"step5Content":"This is either 'PA' or 'MA' (Physical Availability or Mechanical Availability)"
+},
+"availability" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Fleet Name",
+"step3Content":"The availability for the asset's life to date (percentage)",
+"step4Content":"The availability for the asset from the Start Date to now",
+"step5Content":"This is either 'PA' or 'MA' (Physical Availability or Mechanical Availability)",
+"step6Content":"Tap anywhere on this row to view the Assets within this Fleet"
+},
+"costsAssets" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Asset Name",
+"step3Content":"The Cost value of To Date",
+"step4Content":"The Cost value of Variance To Date",
+"step5Content":"The Cost value of Projected Variance"
+},
+"costs" : {"step0Content":"The Site Name",
+"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Fleet Name",
+"step3Content":"The Cost value of To Date",
+"step4Content":"The Cost value of Variance To Date",
+"step5Content":"The Cost value of Projected Variance",
+"step6Content":"Tap anywhere to view the Assets within this Fleet"
+},
+"menu" : {"step1Content":"Tap here to go back to the Dashboard",
+"step2Content":"Tap here to go back to the previous screen",
+"step3Content":"The Site Name",
+"step4Content":"Tap anywhere on this row to the Asset Performance"
+},
+"reliabilityAssets" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Asset Name",
+"step3Content":"The MTBF To Date",
+"step4Content":"The MTBF Month To Date",
+"step5Content":"The MTBS To Date",
+"step6Content":"The MTBS Month To Date",
+"step7Content":"The MTBUPS To Date",
+"step8Content":"The MTBUPS Month To Date"
+},
+"reliability" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Fleet Name",
+"step3Content":"The MTBF To Date",
+"step4Content":"The MTBF Month To Date",
+"step5Content":"The MTBS To Date",
+"step6Content":"The MTBS Month To Date",
+"step7Content":"The MTBUPS To Date",
+"step8Content":"The MTBUPS Month To Date",
+"step9Content":"Tap anywhere to view the Assets within this Fleet"
+},
+"selectSite" : {"step1Content":"Tap here to select your Site name",
+"step2Content":"Tap here to go to the Dashboard screen"
+},
+"timesheetEntry" : {"pageTitle":"Edit Timesheet"
+},
+"utilisationAssets" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Asset Name",
+"step3Content":"The UOM",
+"step4Content":"The Usage To Date",
+"step5Content":"The Usage Month To Date",
+"step6Content":"The Usage Variance To Date",
+"step7Content":"The Usage Variance Month To Date",
+"step8Content":"The Days Since Last Usage Reading"
+},
+"utilisation" : {"step1Content":"Tap here to filter the information that is shown here",
+"step2Content":"The Fleet Name",
+"step3Content":"The UOM",
+"step4Content":"The Usage To Date",
+"step5Content":"The Usage Month To Date",
+"step6Content":"The Usage Variance To Date",
+"step7Content":"The Usage Variance Month To Date",
+"step8Content":"The Days Since Last Usage Reading",
+"step9Content":"Tap anywhere to view the Assets within this Fleet"
+}
+}
+}

@@ -1,0 +1,73 @@
+﻿/*Main content*/
+.page #mainContent .page-navigation span {
+    display: none;
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.page #mainContent .page-navigation .amtmobile-left-open::before {
+    position: relative;
+    top: 15px;
+    left: 25px;
+}
+
+.page #mainContent .page-navigation .amtmobile-left-open {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    color: #ee2722;
+    background: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+}
+
+    .page #mainContent .page-navigation .amtmobile-left-open:hover {
+        width: 95px;
+        background: #0d0c0d;
+    }
+
+        .page #mainContent .page-navigation .amtmobile-left-open:hover::after {
+            content: 'Back';
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 27px;
+            left: 50px;
+        }
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 1280px) {
+    .page #mainContent .about{
+        margin-top:50px;
+    }
+
+    .page #mainContent .page-navigation .amtmobile-left-open::before {
+        position: relative;
+        top: 10px;
+        left: 15px;
+    }
+
+    .page #mainContent .page-navigation .amtmobile-left-open {
+        top: 77px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+        .page #mainContent .page-navigation .amtmobile-left-open:hover::after {
+            content: 'Back';
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 17px;
+            left: 40px;
+        }
+}

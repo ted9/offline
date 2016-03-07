@@ -1,0 +1,351 @@
+﻿/*Header navigation bar*/
+#navigationBar {
+    min-height: 45px !important;
+    margin-bottom: 0;
+}
+
+    #navigationBar .amtmobile-left-open {
+        color: #fff;
+        font-size: 21px;
+        text-decoration: none;
+        outline: none;
+    }
+/*Timeshet login*/
+@media(max-width:960px) {
+    .backgroundPageUnderPopup .ico {
+        font-size: 170px;
+        vertical-align: middle;
+    }
+
+    .backgroundPageUnderPopup .txt {
+        color: #E91D25;
+        font-size: 50pt;
+    }
+}
+
+@media (max-width: 768px) {
+    .backgroundPageUnderPopup .ico {
+        font-size: 150px;
+        vertical-align: middle;
+    }
+
+    .backgroundPageUnderPopup .txt {
+        color: #E91D25;
+        font-size: 45pt;
+    }
+}
+
+@media(max-width: 765px) {
+    .dashboard .title {
+        display: none;
+    }
+
+    .dashboard .icon {
+        display: none;
+    }
+
+    .dashboard .displayUsername {
+        display: block;
+    }
+
+    /* Grid*/
+
+    .table-wrapper table.grid tr td .amtmobile-right-open {
+        font-size: 30px;
+    }
+
+    .mobile-grid-wrapper table.grid {
+        background-color: white;
+    }
+
+    .mobile-grid-wrapper .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mobile-grid-wrapper table.grid tr td {
+        vertical-align: middle;
+    }
+
+        .mobile-grid-wrapper table.grid tr td .amtmobile-right-open {
+            color: #C8C8C8;
+            font-size: 24px;
+            outline: medium none;
+            text-decoration: none;
+        }
+
+    .mobile-grid-wrapper table.grid > thead > tr > th.first-col, table.grid > tbody > tr > td.first-col {
+        min-width: 52px;
+        padding-left: 0;
+    }
+
+    .mobile-grid-wrapper table.grid > tbody > tr > td .primary-text {
+        font-size: 1.3em;
+        padding-left: 0;
+        padding-right: 0;
+        height: 30px;
+    }
+
+    .mobile-grid-wrapper table.grid > tbody > tr > td .secondary-text {
+        text-align: left;
+        font-size: 1.0em;
+        padding-left: 0;
+        line-height: 20px;
+    }
+
+    /* List */
+    .list-wrapper .list-group .list-group-item {
+        border-radius: 0;
+        padding: 16px 23px;
+    }
+
+    /*Menu wrapper*/
+    .menu-wrapper .list-group .list-group-item .arrow {
+        padding-right: 0;
+    }
+
+    .menu-wrapper .list-group .list-group-item .amtmobile-right-open {
+        font-size: 24px;
+    }
+
+    .menu-wrapper .list-group .list-group-item .h4 {
+        line-height: 24px;
+        font-size: 18px;
+    }
+
+
+    #customerDataTemplateGrid > tbody > tr > td .primary-text {            
+        height: auto !important;
+    }
+}
+
+@media(min-width: 650px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .tablet {
+        display: none !important;
+    }
+    /*left command*/
+    .page .header .left-command {
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 100;
+    }
+
+        .page .header .left-command .btn,
+        .page .header .right-command .btn {
+            margin-top: 7px;
+        }
+
+    .page #mainContent {
+        padding-top: 0;
+        padding-bottom: 1px !important;
+    }
+
+        .page #mainContent .contentWrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+    /*.maincontent-inner .col-sm-12 {
+        padding-left:0px!important;
+        padding-right:0px!important;
+    }*/
+
+    .backgroundPageUnderPopup {
+        padding-top: 25px;
+    }
+
+        .backgroundPageUnderPopup .ico {
+            font-size: 130px;
+            vertical-align: middle;
+        }
+
+        .backgroundPageUnderPopup .txt {
+            color: #E91D25;
+            font-size: 35pt;
+        }
+
+        .menu-page .menu-page-content,
+    .supervisor .menu-page,
+    .workbench .menu-page {
+        padding-top: 0px;
+    }
+
+    .dialog .panel {
+        border-radius: 0;
+    }
+
+    .homeBack {
+        position: absolute;
+        top: 4px;
+        /*left: -6px;*/
+    }
+
+    .date-navi-margin {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /*common*/
+    /*hour style*/
+    .mobile-grid-wrapper .hour {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        width: 50px !important;
+        font-weight: bold;
+    }
+
+    .mobile-grid-wrapper .hour-label {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .mobile-grid-wrapper .hour-default {
+        background-color: #fff;
+        color: #383838;
+        border: 1px solid #ccc;
+        display: table-cell;
+        line-height: 29px;
+    }
+
+    .mobile-grid-wrapper .hour-lower {
+        border-top: 1px solid #dddddd !important;
+    }
+
+    .mobile-grid-wrapper .hour-greater {
+        border-top: 1px solid #dddddd !important;
+    }
+
+    span.hour-value {
+        width: 55px;
+        display: table;
+    }
+    /*End hour style*/
+    /*End common*/
+    /*About*/
+    .about h4 {
+        margin-left: 15px;
+    }
+
+    .legal-privacy .content {
+        margin-top: 0px;
+        border-width: 0px;
+    }
+    /*End about*/
+    /*Supervisor confirmation*/
+    #supervisorConfirmationItems .emp-name-truncate {
+        width: 164px;
+    }
+
+    .mobile-grid-wrapper .timesheet-summary .mobile-employee-summary-grid {
+        padding-bottom: 15px;
+    }
+
+    .mobile-grid-wrapper .mobile-employee-summary-grid .comfirmation {
+        padding: 0;
+        width: 50px;
+    }
+
+    .mobile-grid-wrapper table.summary-items td {
+        vertical-align: middle !important;
+        padding: 17px 8px;
+    }
+
+        .mobile-grid-wrapper table.summary-items td div.employee-confirmed {
+            margin-top: -7px;
+        }
+
+        .mobile-grid-wrapper table.summary-items td span.employee-confirmed-label {
+            font-size: 0.85em;
+            font-weight: bold;
+            color: #8A8A8A;
+        }
+
+        .mobile-grid-wrapper table.summary-items td span.employee-confirmed-value {
+            font-size: 0.85em;
+            color: #828282;
+            font-weight: normal;
+        }
+
+        .mobile-grid-wrapper table.summary-items td.comfirmation {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .mobile-grid-wrapper .refine{
+            margin-top: 7px;
+            margin-bottom: 7px;
+            margin-right: 5px;
+        }
+
+    /*End supervisor confirmation*/
+
+    .employee-timesheet-info .row .totalhour {
+        text-align: center;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: table-cell;
+    }
+
+    #defectGridMobile .asset {
+        max-width: 200px;
+    }    
+}
+
+@media (max-width: 480px) {
+    .selectInspection .row .inspectionTypeLabel { margin-top: 0 !important; }
+    
+    .inspectionInstruction .row .optionSafety {
+            width: 160px !important;            
+    }
+    .inspectionInstruction .row .alignment {     
+            width: 90px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .backgroundPageUnderPopup {
+        padding-top: 25px;
+    }
+
+        .backgroundPageUnderPopup .ico {
+            font-size: 100px;
+            vertical-align: middle;
+        }
+
+        .backgroundPageUnderPopup .txt {
+            color: #E91D25;
+            font-size: 20pt;
+        }
+
+    /*Inspection Instruction*/
+    .inspectionInstruction .row .img {
+        max-width: 280px !important;
+    }
+    /*End Inspection Instruction*/
+}
+
+@media (max-width: 200px) {
+    .backgroundPageUnderPopup {
+        padding-top: 25px;
+    }
+
+        .backgroundPageUnderPopup .ico {
+            font-size: inherit;
+            vertical-align: middle;
+        }
+
+        .backgroundPageUnderPopup .txt {
+            color: #E91D25;
+            font-size: inherit;
+        }
+}
+/*End timeshet login*/
+

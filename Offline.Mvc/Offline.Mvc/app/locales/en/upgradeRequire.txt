@@ -1,0 +1,7 @@
+{
+"upgradeRequire" : {"pageTitle":"Welcome to AMT Mobile",
+"upgradeRequire":"Browser Upgrade Require",
+"upgradeRequireFirstText":"You are using an outdated version of your browser which is not supported in AMT Mobile.",
+"upgradeRequireSecondText":"We suggest upgrading to a more recent version. Please contact your administrator if you need help"
+}
+}

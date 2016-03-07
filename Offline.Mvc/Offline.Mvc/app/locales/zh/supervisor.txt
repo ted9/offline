@@ -1,0 +1,34 @@
+{
+"menu" : {"pageHeading":"点Supervisor",
+"pageTitle":"点Supervisor",
+"AuthoriseWorkorders":"点Authorise Workorders",
+"StatutoryCompliance":"点Statutory Compliance",
+"TimesheetConfirmation":"点Timesheet Confirmation"
+},
+"selectSite" : {"pageTitle":"点Select Site"
+},
+"supervisorConfirmation" : {"confirmed":"点Confirmed",
+"confirmSupervisorNotifyMsg":"点Supervisor Timesheet confirmed...",
+"confirmSupervisorNotifyTitle":"点Confirm Supervisor",
+"details":"点Details",
+"employee":"点Employee:",
+"employeeHeader":"点Employee",
+"emptyConfirmationItemsNotifyMsg":"点Confirmation item is empty",
+"ewt":"点EWT:",
+"filterDialogHeader":"点Employee",
+"filterText":"点Refine",
+"hasNoData":"点There are no Employees",
+"hours":"点Hours",
+"loadConfirmationItemsNotifyTitle":"点Load Confirmation Items",
+"pageTitle":"点Supervisor Confirmation",
+"productivity":"点Productivity:",
+"summary":"点Summary",
+"unconfirmed":"点Not Confirmed",
+"unconfirmSupervisorNotifyMsg":"点Supervisor Timesheet unconfirmed",
+"unconfirmSupervisorNotifyTitle":"点Unconfirmed Supervisor"
+},
+"supervisorLogin" : {"pageTitle":"点Supervisor Login"
+},
+"workordersAuthorization" : {"pageTitle":"点Authorise Workorders"
+}
+}

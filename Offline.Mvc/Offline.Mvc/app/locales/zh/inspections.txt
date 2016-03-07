@@ -1,0 +1,37 @@
+{
+"addOrEditDefect" : {"AddingPageTitle":"点Add New Defect",
+"confirmationExitPage":"点Your changes have not been saved - are you sure you want to continue?",
+"EditingPageTitle":"点Edit Defect"
+},
+"employeeLogin" : {"pageTitle":"点Employee Login"
+},
+"inspectionFeedback" : {"pageTitle":"点Inspection Feedback"
+},
+"inspectionHeader" : {"pageTitle":"点Inspection Header"
+},
+"inspectionSummary" : {"pageTitle":"点Inspection Summary"
+},
+"measurement" : {"hasNoData":"点There are no Measurement Readings",
+"navPageTitle":"点- Record Measurement",
+"pageTitle":"点Measurements",
+"recordPageTitle":"点Record Measurement"
+},
+"menu" : {"defects":"点Defects",
+"inspections":"点Inspections",
+"measurements":"点Measurements",
+"statutoryCompliance":"点Statutory Compliance",
+"usages":"点Usages"
+},
+"selectAsset" : {"pageTitle":"点Select Asset"
+},
+"selectInspection" : {"pageTitle":"点Select Inspection"
+},
+"selectSite" : {"pageTitle":"点Select Site"
+},
+"viewDefects" : {"hasNoData":"点There are no Defects",
+"pageTitle":"点Defects"
+},
+"viewUsages" : {"hasNoData":"点There are no Usage Readings",
+"pageTitle":"点Usages"
+}
+}

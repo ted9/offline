@@ -1,0 +1,34 @@
+{
+"menu" : {"pageHeading":"Supervisor",
+"pageTitle":"Supervisor",
+"AuthoriseWorkorders":"Authorise Workorders",
+"StatutoryCompliance":"Statutory Compliance",
+"TimesheetConfirmation":"Timesheet Confirmation"
+},
+"selectSite" : {"pageTitle":"Select Site"
+},
+"supervisorConfirmation" : {"confirmed":"Confirmed",
+"confirmSupervisorNotifyMsg":"Supervisor Timesheet confirmed...",
+"confirmSupervisorNotifyTitle":"Confirm Supervisor",
+"details":"Details",
+"employee":"Employee:",
+"employeeHeader":"Employee",
+"emptyConfirmationItemsNotifyMsg":"Confirmation item is empty",
+"ewt":"EWT:",
+"filterDialogHeader":"Employee",
+"filterText":"Refine",
+"hasNoData":"There are no Employees",
+"hours":"Hours",
+"loadConfirmationItemsNotifyTitle":"Load Confirmation Items",
+"pageTitle":"Supervisor Confirmation",
+"productivity":"Productivity:",
+"summary":"Summary",
+"unconfirmed":"Not Confirmed",
+"unconfirmSupervisorNotifyMsg":"Supervisor Timesheet unconfirmed",
+"unconfirmSupervisorNotifyTitle":"Unconfirmed Supervisor"
+},
+"supervisorLogin" : {"pageTitle":"Supervisor Login"
+},
+"workordersAuthorization" : {"pageTitle":"Authorise Workorders"
+}
+}

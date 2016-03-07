@@ -1,0 +1,33 @@
+{
+"about" : {"amtMobileSection":"AMT Mobile",
+"appVersion":"App Version",
+"buildDate":"Build Date",
+"disableAdministratorTourStatus":"Tutorial for Administrator is turned off",
+"disableCustomersTourStatus":"Tutorial for Customer is turned off",
+"disableFleetStatisticsTourStatus":"Tutorial for Fleet Statistics is turned off",
+"disableInspectionsTourStatus":"Tutorial for Inspections is turned off",
+"disableQuoterTourStatus":"Tutorial for Quoter is turned off",
+"disableSupervisorTourStatus":"Tutorial for Supervisor is turned off",
+"disableTimesheetTourStatus":"Tutorial for Timesheet is turned off",
+"disableWorkbenchTourStatus":"Tutorial for Workbench is turned off",
+"enableAdministratorTourStatus":"Tutorial for Administrator will be shown the next time",
+"enableCustomersTourStatus":"Tutorial for Customer will be shown the next time",
+"enableFleetStatisticsTourStatus":"Tutorial for Fleet Statistics will be shown the next time",
+"enableInspectionsTourStatus":"Tutorial for Inspections will be shown the next time",
+"enableQuoterTourStatus":"Tutorial for Quoter will be shown the next time",
+"enableSupervisorTourStatus":"Tutorial for Supervisor will be shown the next time",
+"enableTimesheetTourStatus":"Tutorial for Timesheet will be shown the next time",
+"enableWorkbenchTourStatus":"Tutorial for Workbench will be shown the next time",
+"isolutionSection":"iSolutions",
+"iSolutionsWebsite":"iSolutions Website",
+"legalAndPrivacy":"Legal & Privacy",
+"pageTitle":"About",
+"pageTitle1":"Legal & Privacy",
+"shareViaEmail":"Share via Email",
+"tourHelp":"Tutorials",
+"tourHelpTitleHint":"Show help for this module",
+"youTubeTrainingMaterials":"YouTube Training Materials"
+},
+"privacy" : {"pageTitle":"Legal & Privacy"
+}
+}

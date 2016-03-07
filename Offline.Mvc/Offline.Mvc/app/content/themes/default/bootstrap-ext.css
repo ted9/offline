@@ -1,0 +1,73 @@
+﻿/*Buttons*/
+.btn {
+    -moz-min-width: 115px;
+    -ms-min-width: 115px;
+    -o-min-width: 115px;
+    -webkit-min-width: 115px;
+    min-width: 115px;
+    font-size: 13px;
+    height: 30px;
+}
+
+.dropdown-toggle {
+    -moz-min-width: 30px;
+    -ms-min-width: 30px;
+    -o-min-width: 30px;
+    -webkit-min-width: 30px;
+    min-width: 30px;
+}
+
+@media(max-width:640px) {
+    .btn {
+        -moz-min-width: 65px;
+        -ms-min-width: 65px;
+        -o-min-width: 65px;
+        -webkit-min-width: 65px;
+        min-width: 65px;
+    }
+}
+
+.modal-dialog .btn {
+    -moz-min-width: 80px !important;
+    -ms-min-width: 80px !important;
+    -o-min-width: 80px !important;
+    -webkit-min-width: 80px !important;
+    min-width: 80px !important;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary.active[disabled],
+fieldset[disabled] .btn-primary.active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary,
+.btn-primary {
+    background-color: #E91D26;
+    border-color: #E91D26;
+}
+/*End of buttons*/
+
+/*bootstrap modal. Keep body position when open dialog if browser has scrollbar */
+.modal {
+    overflow-y: auto !important;
+    position: absolute !important;
+}
+
+body.modal-open {
+    overflow: auto !important;
+    overflow-x: hidden;
+}

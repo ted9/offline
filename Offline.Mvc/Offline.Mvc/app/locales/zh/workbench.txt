@@ -1,0 +1,107 @@
+{
+"addOrEditDefect" : {"AddingPageTitle":"点Add New Defect",
+"confirmationExitPage":"点Your changes have not been saved - are you sure you want to continue?",
+"EditingPageTitle":"点Edit Defect"
+},
+"addOrEditNotification" : {"addNotification":"点Add New Notification",
+"addNotificationSuccessful":"点Notification added successfully",
+"asset":"点Asset",
+"componentCode":"点Component Code",
+"confirmationMessage":"点Your changes have not been saved - are you sure you want to continue?",
+"editNotification":"点Edit Notification",
+"failValidation":"点Please fill in all mandatory fields",
+"jobCode":"点Job Code",
+"modifierCode":"点Modifier Code",
+"notificationTitle":"点Notification Title",
+"raisedBy":"点Raised By",
+"raisedByDescription":"点Raised By",
+"raisedComment":"点Raised Comments",
+"raisedCommentDesription":"点Describe Raised Comments",
+"rating":"点Rating",
+"repairInstruction":"点Repair Instructions",
+"repairInstructionDesription":"点Describe Repair Instructions",
+"selectAsset":"点Select Asset",
+"selectComponentCode":"点Select Component Code",
+"selectJobCode":"点Select Job Code",
+"selectModifierCode":"点Select Modifier Code",
+"selectRaisedBy":"点Raised By",
+"selectRating":"点Select Rating",
+"selectTaskType":"点Select Task Type",
+"taskType":"点Task Type",
+"title":"点Title",
+"updateNotificationSuccessful":"点Notification saved"
+},
+"employeeLogin" : {"pageTitle":"点Employee Login"
+},
+"inspectionFeedback" : {"pageTitle":"点Inspection Feedback"
+},
+"inspectionHeader" : {"pageTitle":"点Inspection"
+},
+"inspectionInstruction" : {"pageTitle":"点Inspection Instructions"
+},
+"inspectionSummary" : {"pageTitle":"点Inspection Summary"
+},
+"measurement" : {"hasNoData":"点There are no Measurement Readings",
+"navPageTitle":"点-2146826259",
+"pageTitle":"点Measurements",
+"recordPageTitle":"点Record Measurement"
+},
+"menu" : {"Inspections":"点Inspections",
+"StatutoryCompliance":"点Statutory Compliance"
+},
+"notification" : {"addNotification":"点Add New Notification",
+"asset":"点Asset",
+"assetPlaceHolder":"点Select Assets",
+"assignTo":"点Assign To",
+"assignToMobile":"点Assign To:",
+"assignToPlaceHolder":"点Select Assign To",
+"endDate":"点End Date",
+"fleet":"点Fleet",
+"fleetPlaceHolder":"点Select Fleets",
+"from":"点From",
+"hasNoData":"点There are no Notifications",
+"pageTitle":"点Notifications",
+"rating":"点Rating",
+"ratingPlaceHolder":"点Select Ratings",
+"refine":"点Refine",
+"saveAndClose":"点Save",
+"startDate":"点Start Date",
+"status":"点Status",
+"statusMobile":"点Status:",
+"statusPlaceHolder":"点Select Status",
+"title":"点Title",
+"to":"点To",
+"workOrderStatus":"点Workorder Status",
+"workOrderstatusPlaceHolder":"点Select Work Order Status"
+},
+"performInspection" : {"hasNoData":"点There are no Inspection"
+},
+"selectAsset" : {"pageTitle":"点Select Asset"
+},
+"selectInspection" : {"pageTitle":"点Select Inspection"
+},
+"selectSite" : {"pageTitle":"点Select Site"
+},
+"statutoryCompliance" : {"branch":"点Branch",
+"branchPlaceHolder":"点Select Branches",
+"equipment":"点Asset",
+"fleet":"点Fleet",
+"fleetPlaceHolder":"点Select Fleets",
+"hasNoData":"点There are no Statutory Compliances records",
+"lastPerformed":"点Last Performed",
+"lastWorkorder":"点Last Workorder",
+"nextDue":"点Next Due",
+"pageTitle":"点Statutory Compliance",
+"strategyTask":"点Strategy Task",
+"strategyTaskPlaceHolder":"点Strategy Tasks"
+},
+"viewDefects" : {"hasNoData":"点There are no Defects",
+"pageTitle":"点Defects"
+},
+"viewUsages" : {"hasNoData":"点There are no Usage Readings",
+"pageTitle":"点Usages"
+},
+"workordersAuthorization" : {"hasNoData":"点There are no Authorise Workorders",
+"pageTitle":"点Authorise Workorders"
+}
+}
