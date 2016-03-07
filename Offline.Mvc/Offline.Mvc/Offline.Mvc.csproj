@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\requireSetup.js" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -572,7 +573,7 @@
     <Content Include="app\locales\zh\upgradeRequire.txt" />
     <Content Include="app\locales\zh\widget.txt" />
     <Content Include="app\locales\zh\workbench.txt" />
-    <Content Include="app\main,.js" />
+    <Content Include="app\main.js" />
     <Content Include="app\resources\administrator.txt" />
     <Content Include="app\resources\amtLogin.txt" />
     <Content Include="app\resources\common.txt" />
