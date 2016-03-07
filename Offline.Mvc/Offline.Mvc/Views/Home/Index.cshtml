@@ -1,18 +1,12 @@
-﻿@inherits System.Web.Mvc.WebViewPage
-@{
-    Layout = null;
-}
+﻿
+<div id="applicationHost"> 
+</div>
+<script src="~/app/lib/require/require.js"></script>
+<script src="~/app/requireSetup.js"></script>
+<script>
+    require.config({
+        baseUrl: 'app'
+    });
+    require(['main'], function () { });
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        this is a test page.
-    </div>
-</body>
-</html>
+</script>
