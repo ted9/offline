@@ -1,0 +1,23 @@
+﻿<div class="error">
+    <!-- ko if: !isMobile() -->
+    <div class="page-navigation">
+        <a class="glyphicon amtmobile-navigation-back" data-bind="click: onBackClicked"></a>
+        <span class="caption" data-i18n="common:errors.navigationText"></span>
+    </div>
+    <!-- /ko-->
+    <div class="page-content">
+
+        <span class="icon-unlink"></span>
+        <strong data-i18n="common:errors.text1">Oops! Something went wrong</strong>
+        <p>
+            <span data-bind="text:detailMessage()"></span>
+            <span data-i18n="common:errors.text2"></span>
+        </p>
+
+    </div>
+
+    <div class="page-toolbar">
+        <a class="info" id="showErrorDetails" data-bind="click: showErrorDetails"><span class="icon-info"></span></a>
+        <a id="emailErrorDetails" data-bind="click: emailErrorDetails"><span class="icon-envelope-alt"></span></a>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<section class="container-fluid page-container">
+    <nav class="page-header">
+        <div class="col-xs-2 left-command">
+            <a class="invisible-tablet logo" data-bind="click: onTabletLeftButtonClicked"></a>
+            <a class="invisible-mobile" data-bind="click:onMobileLeftButtonClicked, css:leftCommand().type, attr:{'data-i18n': leftCommand().i18nTextKey, 'disabled' : leftCommand().disable || false }"></a>
+        </div>
+        <div class="col-xs-8 mid-command page-title" data-bind="pageHeader:{cmd:midCommand(), maxLength:maxLengthOfPageHeader}">
+        </div>
+        <div class="col-xs-2 right-command">
+            <a class="invisible-mobile" data-bind="click:rightCommand().click,css:rightCommand().type, attr:{'data-i18n':rightCommand().i18nTextKey, 'disabled' : rightCommand().disable() || false, id:rightCommand().id }"></a>
+            <div class="btn-group invisible-tablet">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-bind="dropdown: true">
+                    <span class="logged-user-name" data-bind="text: displayName"></span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="#" data-bind="click: onLogoutClick" data-i18n="common:string.logout"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" data-bind="router: { }">
+        <!--transition:'entrance'-->
+    </div>
+    <div style="background-color:red;height:40px;position:fixed;bottom:-40px;"></div>
+    <div class="error">
+        <div class="page-toolbar">
+            <a class="info" id="showErrorDetails" data-bind="click: showErrorDetails"><span class="icon-info"></span></a>
+            <a id="emailErrorDetails" data-bind="click: emailErrorDetails"><span class="icon-envelope-alt"></span></a>
+        </div>
+    </div>
+</section>

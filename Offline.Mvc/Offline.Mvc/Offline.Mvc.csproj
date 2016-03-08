@@ -111,7 +111,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\configuration.js" />
+    <Content Include="app\config\routes\about.js" />
+    <Content Include="app\layout\index.html" />
+    <Content Include="app\layout\index.js" />
+    <Content Include="app\modules\core\models\userProfile.js" />
+    <Content Include="app\modules\core\helper\custombindingHelper.js" />
+    <Content Include="app\modules\core\helper\i18nextLanguage.js" />
+    <Content Include="app\modules\core\helper\logger\defaultLogger.js" />
+    <Content Include="app\modules\core\helper\logger\errorWatcher.js" />
+    <Content Include="app\modules\core\helper\logger\toasterLogger.js" />
+    <Content Include="app\modules\core\helper\sessionStorageHelper.js" />
+    <Content Include="app\modules\core\helper\uiHelper.js" />
+    <Content Include="app\modules\core\helper\userProfileHelper.js" />
+    <Content Include="app\modules\core\models\enums.js" />
+    <Content Include="app\modules\core\services\hash.js" />
+    <Content Include="app\modules\core\services\navigationService.js" />
     <Content Include="app\requireSetup.js" />
+    <Content Include="app\viewmodels\error.js" />
+    <Content Include="app\views\error.html" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -149,6 +167,7 @@
     <Content Include="app\lib\plupload\readme.md" />
     <Content Include="app\lib\thirdparty.min.js.map" />
     <Content Include="app\lib\timepicker\README.md" />
+    <Content Include="offline.appcache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,7 +176,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\config\appConfig.js" />
+    <Content Include="app\config\appConstants.js" />
     <Content Include="app\content\app.css" />
     <Content Include="app\content\app.mobile.css" />
     <Content Include="app\content\appcontent.css" />

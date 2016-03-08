@@ -6,4 +6,5 @@
         sessionId: window.Session_Id,
         timeout: 60000
     }
+    return config;
 });
