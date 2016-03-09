@@ -2,7 +2,7 @@
     'knockout',
     'modules/core/helper/logger/errorWatcher',
     'notifyLogger',
-    'modules/core/models/appSettings',
+    'config/appSettings',
     'plugins/router',
     'modules/core/helper/deviceHelper',
     'languageHelper',

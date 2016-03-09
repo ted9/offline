@@ -3,28 +3,31 @@
     'durandal/app',
     'jquery',
     'knockout',
-    'config/app.config',
-    'modules/core/models/collection/hash',
+    'config/appConstants',
+    'modules/core/services/hash',
     'plugins/history',
     'dataContext',
     'modules/core/helper/userProfileHelper',
     'logger',
     'languageHelper',
-    'modules/core/models/enums' // ,
+    'modules/core/models/enums',
+    'config/navPageButtonType',
+    'modules/core/helper/deviceHelper'
     //'modules/timesheet/config/urlConfig',
     //'modules/core/helper/uiHelper',
     //'modules/core/models/appSettings',
     //'config/routes/exceptionRoutes',
     //'modules/core/services/navigationService',
-    //'config/navPageButtonType',
+    
     //'modules/core/helper/moduleHelper',
-    //'modules/core/helper/deviceHelper',
+    //,
     //'modules/core/helper/tourHelper',
     //'modules/core/services/tour',
     //'modules/core/helper/amtSettingsDbHelper',
     //'modules/core/helper/offlineHelper'
-], function (router, app, $, ko, appConfig, hashFactory, history, datacontext, userProfileHelper, logger, languageHelper, enums) //, urlConfig,
-  //  uiHelper, appSettings, exceptionRoutes, navigationService, navPageButtonType, moduleHelper, deviceHelper, tourHelper, tourService, amtSettingsDbHelper, offlineHelper) {
+], function (router, app, $, ko, appConfig, hashFactory, history, datacontext, userProfileHelper,
+    logger, languageHelper, enums, navPageButtonType, deviceHelper) //, urlConfig,
+  //  uiHelper, appSettings, exceptionRoutes, navigationService, moduleHelper, tourHelper, tourService, amtSettingsDbHelper, offlineHelper) {
    {
     "use strict";
     /*properties*/
@@ -230,16 +233,16 @@
     function compositionComplete() { }
 
     function getAppSettings(callback) {
-        offlineHelper.isOffline().then(function (isOffline) {
-            if (isOffline) {
-                return amtSettingsDbHelper.getSetting("appSettings").then(function (data) {
-                    saveAppSettingsObject(data.value);
-                    if (callback) {
-                        callback();
-                    }
-                });
+        //offlineHelper.isOffline().then(function (isOffline) {
+        //    if (isOffline) {
+        //        return amtSettingsDbHelper.getSetting("appSettings").then(function (data) {
+        //            saveAppSettingsObject(data.value);
+        //            if (callback) {
+        //                callback();
+        //            }
+        //        });
 
-            } else {
+        //    } else {
                 var dataCtx = datacontext.getInstance();
                 var url = String.format('{0}/configuration/settings', appConfig.apiUrl);
                 return dataCtx.get("configuration_settings", url).then(function (data) {
@@ -249,8 +252,8 @@
                     }
                     amtSettingsDbHelper.saveSetting("appSettings", data);
                 });
-            }
-        });
+        //    }
+        //});
     }
 
     function saveAppSettingsObject(data) {
@@ -309,28 +312,33 @@
     }
 
     function getUserModules(userId, callback) {
-        offlineHelper.isOffline().then(function (isOffline) {
-            if (isOffline) {
-                //get usermodules from offline
-                amtSettingsDbHelper.getUserModules(userId).then(function (userModules) {
-                    if (callback) {
-                        callback(userModules);
-                    }
-                });
-            } else {
-                var dataCtx = datacontext.getInstance();
-                var url = String.format('{0}/module/moduleconfig/usermodules', appConfig.apiUrl);
-                dataCtx.get("usermodules_get", url).then(function (data) {
-                    var userModules = data.result || data;
-                    amtSettingsDbHelper.saveUserModules(userId, userModules).then(function () {
-                        console.log('saved usermodules');
-                        if (callback) {
-                            callback(userModules);
-                        }
-                    });
-                });
-            }
-        });
+        //offlineHelper.isOffline().then(function (isOffline) {
+        //    if (isOffline) {
+        //        //get usermodules from offline
+        //        amtSettingsDbHelper.getUserModules(userId).then(function (userModules) {
+        //            if (callback) {
+        //                callback(userModules);
+        //            }
+        //        });
+        //    } else {
+        //        var dataCtx = datacontext.getInstance();
+        //        var url = String.format('{0}/module/moduleconfig/usermodules', appConfig.apiUrl);
+        //        dataCtx.get("usermodules_get", url).then(function (data) {
+        //            var userModules = data.result || data;
+        //            amtSettingsDbHelper.saveUserModules(userId, userModules).then(function () {
+        //                console.log('saved usermodules');
+        //                if (callback) {
+        //                    callback(userModules);
+        //                }
+        //            });
+        //        });
+        //    }
+        //});
+
+
+        if (callback) {
+                                callback();
+                            }
     }
 
     function setUserProfile(userprofile, userModules, callback) {
