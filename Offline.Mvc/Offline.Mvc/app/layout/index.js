@@ -123,15 +123,15 @@
             indexLayout.maxLengthOfPageHeader = 20;
         }
         router.on("router:route:activating", function (instance, instruction, router) {
-            logger.info("Tutorial: Destroy tutorial of current page");
-            tourHelper.destroy();
+            //logger.info("Tutorial: Destroy tutorial of current page");
+            //tourHelper.destroy();
         });
         router.on("router:navigation:complete", function (instance, instruction, router) {
             setupNavigation(instance);
             updateDocumentTitle(instruction);
             verifyPermission(instruction);
             logger.info("router:navigation:complete: {0}", instruction);
-            navigationService.storeUrlHash(); //store previous & current url hash into localStorage to use in error
+        //    navigationService.storeUrlHash(); //store previous & current url hash into localStorage to use in error
 
             if (window.Select2 && window.Select2.class && window.Select2.class.abstract && window.Select2.class.abstract.prototype && window.Select2.class.abstract.prototype.closeFromRouter) {
                 window.Select2.class.abstract.prototype.closeFromRouter();
@@ -141,8 +141,8 @@
             //logger.info("Tutorial: Load tutorial for page: {0}", instruction.config.moduleId);
             //tourHelper.load(instruction);
         });
-        getAppSettings(function () {
-            getUserProfile(function () {
+        //getAppSettings(function () {
+        //    getUserProfile(function () {
                 buildRoutes(function () {
                     registerEventHandlers();
 
@@ -155,8 +155,8 @@
                         router.activate();
                     }
                 });
-            });
-        });
+        //    });
+        //});
     }
 
     function loadAndSetModuleAsActive(callback) {
@@ -406,7 +406,7 @@
             {
                 route: '',
                 //title: 'Dashboard',
-                moduleId: 'layout/dashboard',
+                moduleId: 'layout/menu',
                 nav: true
             }, {
                 route: 'error',
@@ -421,23 +421,23 @@
             }
         ];
 
-        var userprofile = userProfileHelper.getUserProfile();
+        //var userprofile = userProfileHelper.getUserProfile();
 
-        onSwitchLanguageClick(userprofile.language);
+        //onSwitchLanguageClick(userprofile.language);
 
-        var routeConfigUrls = [];
-        for (var i = 0; i < userprofile.modules.length; i++) {
-            var module = userprofile.modules[i];
-            var url = String.format("config/routes/{0}", module.id);
-            routeConfigUrls.push(url);
-        }
+        //var routeConfigUrls = [];
+        //for (var i = 0; i < userprofile.modules.length; i++) {
+        //    var module = userprofile.modules[i];
+        //    var url = String.format("config/routes/{0}", module.id);
+        //    routeConfigUrls.push(url);
+        //}
 
-        require(routeConfigUrls, function () {
-            for (var i = 0; i < arguments.length; i++) {
-                for (var j = 0; j < arguments[i].length; j++) {
-                    routes.push(arguments[i][j]);
-                }
-            }
+        //require(routeConfigUrls, function () {
+        //    for (var i = 0; i < arguments.length; i++) {
+        //        for (var j = 0; j < arguments[i].length; j++) {
+        //            routes.push(arguments[i][j]);
+        //        }
+        //    }
             router.map(routes)
                 .buildNavigationModel()
                 .mapUnknownRoutes("viewmodels/error");
@@ -445,7 +445,7 @@
             if (callback) {
                 callback();
             }
-        });
+        //});
     }
 
     function onHomeLeftClicked() {
