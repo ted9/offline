@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Offline.Mvc", "Offline.Mvc\Offline.Mvc.csproj", "{67B1F0B8-7D75-43BB-A365-9487A76276EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Offline.WebApi", "Offline.WebApi\Offline.WebApi.csproj", "{B0CE7FCD-E898-46AF-A581-4E1F1677C69F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67B1F0B8-7D75-43BB-A365-9487A76276EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B1F0B8-7D75-43BB-A365-9487A76276EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B1F0B8-7D75-43BB-A365-9487A76276EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0CE7FCD-E898-46AF-A581-4E1F1677C69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CE7FCD-E898-46AF-A581-4E1F1677C69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CE7FCD-E898-46AF-A581-4E1F1677C69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CE7FCD-E898-46AF-A581-4E1F1677C69F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

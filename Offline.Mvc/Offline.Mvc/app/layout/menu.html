@@ -1,9 +1,20 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+﻿<div class="dashboard">
+    <div class="title" data-i18n="common:dashboard.myModules">
+        My Modules
+    </div>
 
-</body>
-</html>
+    <div class="icon">
+        <!--<img data-bind="attr: {src: logoUrl}" />-->
+    </div>
+    <div class="offline-ui">
+        <span class="offline-ui-down" data-bind="visible:isOffline() === true" data-i18n="common:dashboard.offline"> </span>
+        <span class="offline-ui-up" data-bind="visible:isOffline() === false" data-i18n="common:dashboard.online"> </span>
+    </div>
+    <div class="display-username">
+        <span class="glyphicon glyphicon-user"></span><span class="user-avatar" data-bind="text: displayName"></span>
+    </div>
+    <div class="clearfix">
+
+    </div>
+    <!--<div id="carousel" data-bind="widget:{kind:'common/jCarousel', id:'homeCarousel', cls:'jcarousel', maskCls: 'mask', runnerCls: 'runner', pageCls: 'page', jcarouselItems: jcarouselItems(), onIconClick: onIconClick }"></div>-->
+</div>

@@ -1,30 +1,64 @@
-*.dll
-*.pdb
-*.suo
-*.cache
-*.user
-[Bb]in
-[Dd]ebug*/
-obj/
-[Rr]elease*/
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
 
-#ignore thumbnails created by windows
-Thumbs.db
-#Ignore files build by Visual Studio
-*.obj
-*.exe
+#Visual Studio files
+*.[Oo]bj
+*.user
 *.aps
 *.pch
 *.vspscc
+*.vssscc
 *_i.c
 *_p.c
 *.ncb
+*.suo
 *.tlb
 *.tlh
 *.bak
+*.[Cc]ache
 *.ilk
 *.log
 *.lib
 *.sbr
+*.sdf
+*.opensdf
+*.mdf
+*.ldf
+*.unsuccessfulbuild
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+*.dll
+*.pdb
+Ankh.NoLoad
+#Nuget packages
+packages*/
+#Tooling
 _ReSharper*/
+*.resharper
 [Tt]est[Rr]esult*
+_references.js
+
+#Project files
+#[Bb]uild/
+
+#Subversion files
+*.svn
+
+# Office Temp Files
+~$*
+
+#dbmdl files
+*.dbmdl
+
+#NuGet
+
+
+packages
+logs
+*.suo
+*.user
+*.dll
