@@ -10,11 +10,12 @@
     'modules/core/helper/deviceHelper',
     'languageHelper',
     'config/navPageButtonType',
+    'modules/core/services/navigationService'
     //'modules/core/helper/tourHelper',
     //'modules/core/helper/offlineHelper',
     //'modules/core/helper/amtSettingsDbHelper'
 ], function (app, widget, ko, config, hashFactory, uiHelper, logger, userProfileHelper,
-    deviceHelper, languageHelper, navPageButtonType) {//, tourHelper, offlineHelper, SettingsDbHelper) {
+    deviceHelper, languageHelper, navPageButtonType, navService) {//, tourHelper, offlineHelper, SettingsDbHelper) {
     var keepModuleItem;
     var userProfile = {};
 
@@ -47,6 +48,10 @@
         if (deviceHelper.isMobile()) {
             pageModel.pageNav.midCommand = { i18nTextKey: 'common:string.empty', text: '', type: navPageButtonType.amtLogo };
         }
+
+        navService.getMenuItems().then(function (data) {
+            console.log(data);
+        });
 
         //return offlineHelper.isOffline().then(function (isOffline) {
         //    console.log('isOffline: ' + isOffline);

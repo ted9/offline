@@ -5,8 +5,10 @@
     'modules/core/helper/uiHelper',
     'modules/core/helper/userProfileHelper',
     'modules/core/helper/logger/errorWatcher',
-    'modules/core/services/navigationService'
-], function (amplify, notify, languageHelper, uiHelper, userProfileHelper, errorWatcher, navigationService) {
+    'modules/core/services/navigationService',
+    'config/appConstants'
+
+], function (amplify, notify, languageHelper, uiHelper, userProfileHelper, errorWatcher, navigationService, appConfig) {
 
     "use strict";
 
@@ -35,7 +37,8 @@
             get: get,
             post: post,
             put: put,
-            remove: remove
+            remove: remove,
+            postRequest: postRequest
         };
         return dataContext;
 
@@ -137,6 +140,12 @@
         }
 
         function post(resourceId, url, requestData, callback) {
+            defineRequest(resourceId, url, requestData, "POST");
+            return sendRequest(resourceId, callback);
+        }
+
+        function postRequest(resourceId, requestData, callback) {
+            var url = appConfig.serviceUrl;
             defineRequest(resourceId, url, requestData, "POST");
             return sendRequest(resourceId, callback);
         }

@@ -7,9 +7,13 @@ using System.Web.Http;
 
 namespace Offline.WebApi.Controllers
 {
-    [RoutePrefix("api/offline")]
+    [RoutePrefix("offline")]
     public class OfflineController : BaseController
     {
+        public OfflineController()
+        {
+            Console.WriteLine("");
+        }
         [HttpGet]
         [Route("menu")]
         public IHttpActionResult GetMenuItems()

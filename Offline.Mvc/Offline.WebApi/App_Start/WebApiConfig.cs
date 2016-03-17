@@ -10,7 +10,12 @@ namespace Offline.WebApi
     {
         public static void Register(HttpConfiguration config) {
             config.MapHttpAttributeRoutes();
-            config.Routes.MapHttpRoute(name: "OfflineApi", routeTemplate: "{controller}", defaults: new { controller = "Offline" });
+          
+            config.Routes.MapHttpRoute(name: "offlineweb", 
+                routeTemplate: "{controller}", 
+                defaults: new { controller = "Offline" });
+
+      
         }
     }
 }
