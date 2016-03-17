@@ -30,3 +30,6 @@ C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\bin\System.Web.WebPages.Razor.xml
 C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\obj\Debug\Offline.Mvc.csprojResolveAssemblyReference.cache
 C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\obj\Debug\Offline.Mvc.dll
 C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\obj\Debug\Offline.Mvc.pdb
+C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\bin\Microsoft.Owin.dll
+C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\bin\Owin.dll
+C:\Lab\AmtOffline\Offline.Mvc\Offline.Mvc\bin\Microsoft.Owin.xml

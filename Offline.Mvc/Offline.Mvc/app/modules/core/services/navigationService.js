@@ -1,7 +1,8 @@
 ﻿define([
     'plugins/router',
-    'amplify'
-], function (router, amplify) {
+    'amplify',
+    'dataContext'
+], function (router, amplify, context) {
     "use strict";
 
     var amplifyUrlHashKey = "_UrlHash_";
@@ -11,7 +12,8 @@
         goError: goError,
         storeUrlHash: storeUrlHash,
         getCurrentUrlHashes: getCurrentUrlHashes,
-        gotoErrorPage: gotoErrorPage
+        gotoErrorPage: gotoErrorPage,
+        getMenuItems: getMenuItems
     };
 
     function navigateTo(route, force) {
@@ -21,6 +23,17 @@
         }
     }
 
+    function getMenuItems() {
+        var eventName = "menu.load";
+        return context.getInstance().postRequest(eventName, createEvent(eventName, []));
+    }
+
+    function createEvent(eventName, parameters) {
+        return {
+            eventName: eventName,
+            parameters: parameters
+        };
+    }
     function goError() {
         router.navigate('#/notifyOfError');
     }
