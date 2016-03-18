@@ -2,6 +2,7 @@
 using Offline.Infrastructure.Logging;
 using Offline.Model;
 using Offline.Service.Interface;
+using Offline.Service.Interface.Root;
 using System;
 using System.Collections.Generic;
 using System.Linq;
