@@ -130,7 +130,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53777</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64454/service/</IISUrl>
+          <IISUrl>http://localhost:64455/service/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:64455/service/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

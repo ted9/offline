@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INavigatorQueryService.cs" />
+    <Compile Include="Common\IControlEventCommandService.cs" />
+    <Compile Include="Common\IControlEventQueryService.cs" />
+    <Compile Include="Common\IControlInfoQueryService.cs" />
+    <Compile Include="Common\IModuleInfoQueryService.cs" />
+    <Compile Include="Root\INavigatorQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Offline.Models\Offline.Model.csproj">
+      <Project>{8e6f8e7a-bafb-4eb8-b392-3c19ffd55bf7}</Project>
+      <Name>Offline.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

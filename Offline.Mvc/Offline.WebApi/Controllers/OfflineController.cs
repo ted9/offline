@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace Offline.WebApi.Controllers
 {
-    [RoutePrefix("offline")]
+    [RoutePrefix("api/offline")]
     public class OfflineController : BaseController
     {
         public OfflineController()
