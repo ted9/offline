@@ -266,6 +266,8 @@ namespace Offline.Service.DataService
                 da2.Fill(ds);
 
                 var paramList = new List<Parameter>();
+                if (ds.Tables.Count > 0)
+                    paramList.Add(new Parameter() { Name = ds.DataSetName, Value = ds, Type = "DataSet", Direction = "Output" });
 
                 foreach (SqlParameter sqlParam in cmd.Parameters)
                 {
@@ -281,9 +283,7 @@ namespace Offline.Service.DataService
                     }
                 }
 
-                if (ds.Tables.Count > 0)
-                    paramList.Add(new Parameter() { Name = ds.DataSetName, Value = ds, Type = "DataSet", Direction = "Output" });
-
+               
                 RenameOutputs(paramList, inputs);
                 RelationShipOutputs(paramList, inputs);
                 return paramList;

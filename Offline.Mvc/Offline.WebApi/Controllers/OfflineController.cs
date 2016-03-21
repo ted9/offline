@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Offline.Model;
+using Offline.Service.Interface.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,18 +12,21 @@ namespace Offline.WebApi.Controllers
     [RoutePrefix("api/offline")]
     public class OfflineController : BaseController
     {
-        public OfflineController()
+        private readonly IControlEventCommandService eventService;
+        public OfflineController(IControlEventCommandService eventService)
         {
             Console.WriteLine("");
+            this.eventService = eventService;
         }
-        [HttpGet]
+        [HttpPost]
         [Route("menu")]
-        public IHttpActionResult GetMenuItems()
+        public IHttpActionResult GetMenuItems([FromBody]ControlEvent controlEvent)
         {
             try
             {
-
-                return Ok();
+                controlEvent.FunctionName = "MENU_GET_P";
+                var results = eventService.ExecuteEvent(controlEvent);
+                return Ok(results);
             }
             catch (Exception ex)
             {
