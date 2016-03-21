@@ -58,9 +58,9 @@
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -114,6 +114,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Offline.Models\Offline.Model.csproj">
+      <Project>{8e6f8e7a-bafb-4eb8-b392-3c19ffd55bf7}</Project>
+      <Name>Offline.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Offline.Service.Interface\Offline.Service.Interface.csproj">
+      <Project>{83d394d2-3177-4136-950b-d8fbe034ce54}</Project>
+      <Name>Offline.Service.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Offline.Services\Offline.Service.csproj">
+      <Project>{34b919fd-e80c-4a5d-ba25-958a2ae71364}</Project>
+      <Name>Offline.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

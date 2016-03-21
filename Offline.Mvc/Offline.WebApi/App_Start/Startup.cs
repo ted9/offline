@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
+using Offline.Service.Common;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,9 @@ namespace Offline.WebApi
             var config = new HttpConfiguration();
             var builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly()).InstancePerRequest();
-           
+
+            builder.RegisterType<ControlEventCommandService>().AsImplementedInterfaces();
+
             var container = builder.Build();
             var dependencyResolver = new AutofacWebApiDependencyResolver(container);
             config.DependencyResolver = dependencyResolver;

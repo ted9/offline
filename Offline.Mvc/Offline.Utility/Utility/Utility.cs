@@ -64,6 +64,7 @@ namespace Offline.Core
 
         }
 
+        
         public static string ObjectToJson<T>(T obj)
         {
             string json = JsonConvert.SerializeObject(
@@ -74,6 +75,61 @@ namespace Offline.Core
             return json;
         }
 
+        public static string DataSetToJson(DataSet ds)
+        {
+            if (ds == null || ds.Tables.Count == 0) return null;
+            var parentTables = new List<string>();
+            var childTables = new List<string>();
+            foreach (DataRelation rel in ds.Relations)
+            {
+                if (!parentTables.Contains(rel.ParentTable.TableName))
+                {
+                    parentTables.Add(rel.ParentTable.TableName);
+                }
+              
+            }
+            var sb = new StringBuilder();
+            if (parentTables.Count == 0)
+            {
+                parentTables.Add(ds.Tables[0].TableName);
+            }
+            foreach (string tableName in parentTables)
+            {
+                sb.Append(string.Format("[{{0}:{1}}],", tableName, DataTableToJson(ds.Tables[tableName],1, 10000)));
+            }
+            sb.Remove(sb.Length - 1, 1);
+            var json = sb.ToString();
+            return json;
+        }
+
+        public static string DataChildTableToJson(DataRow row, DataRelation relChild)
+        {
+            var dataRows = row.GetChildRows(relChild);
+            var childJson = DataRowsToJson(dataRows);
+            return childJson;
+        }
+
+        private static string DataRowsToJson(DataRow[] dataRows)
+        {
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            for (var i = 0; i < dataRows.Length; i++)
+            {
+                var dr = dataRows[i];
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in dr.Table.Columns)
+                {
+                    row.Add(col.ColumnName.Replace(" ", "").Replace(".", "_"), dr[col]);
+                }
+                rows.Add(row);
+            }
+            var v = new ValueTable()
+            {
+                Data = rows
+            };
+            var result = ObjectToJson(v);
+            return result;
+        }
         public static string DataTableToJson(DataTable dt, int pageIndex, int pageSize)
         {
             // pageIndex starts at 1
@@ -94,6 +150,16 @@ namespace Offline.Core
                     //}
                     //else
                     row.Add(col.ColumnName.Replace(" ", "").Replace(".", "_"), dr[col]);
+                }
+                
+                foreach (DataRelation rel in dt.DataSet.Relations)
+                {
+                    var childRows = dr.GetChildRows(rel);
+                    if (childRows.Length > 0)
+                    {
+
+                        row.Add(rel.RelationName, DataRowsToJson(childRows));
+                    }
                 }
                 rows.Add(row);
             }
@@ -153,8 +219,6 @@ namespace Offline.Core
             #endregion
 
         }
-
-
     }
 
     public class ValueTable
