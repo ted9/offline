@@ -78,24 +78,31 @@ namespace Offline.Core
         public static string DataSetToJson(DataSet ds)
         {
             if (ds == null || ds.Tables.Count == 0) return null;
+            ds.Relations.Add(new DataRelation("Rel", ds.Tables[0].Columns["parentId"], ds.Tables[1].Columns["ParentId"]));
             var parentTables = new List<string>();
             var childTables = new List<string>();
+            foreach (DataTable dt in ds.Tables)
+            {
+                parentTables.Add(dt.TableName);
+            }
             foreach (DataRelation rel in ds.Relations)
             {
-                if (!parentTables.Contains(rel.ParentTable.TableName))
+                if (parentTables.Contains(rel.ChildTable.TableName))
                 {
-                    parentTables.Add(rel.ParentTable.TableName);
+                    parentTables.Remove(rel.ChildTable.TableName);
                 }
               
             }
             var sb = new StringBuilder();
-            if (parentTables.Count == 0)
-            {
-                parentTables.Add(ds.Tables[0].TableName);
-            }
             foreach (string tableName in parentTables)
             {
-                sb.Append(string.Format("[{{0}:{1}}],", tableName, DataTableToJson(ds.Tables[tableName],1, 10000)));
+                var dtJson = DataTableToJson(ds.Tables[tableName], 1, 10000);
+                //sb.Append(string.Format("[{\"{0}\":xxxx}],", tableName));
+                sb.Append("[{\"");
+                sb.Append(tableName);
+                sb.Append("\":");
+                sb.Append(dtJson);
+                sb.Append("}],");
             }
             sb.Remove(sb.Length - 1, 1);
             var json = sb.ToString();
