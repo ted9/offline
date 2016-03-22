@@ -14,12 +14,10 @@ namespace Offline.Service.Common
 {
     public class ControlEventCommandService : IControlEventCommandService
     {
-        public List<Parameter> ExecuteEvent(ControlEvent controlEvent)
+        public List<ParameterObj> ExecuteEvent(ControlEvent controlEvent)
         {
-            var results = DbService.Instance.RunStoredProcedure(controlEvent.FunctionName, controlEvent.EventParams);
-            DataSet ds = results[0].Value as DataSet;
-            var json = Utility.DataSetToJson(ds);
-            return results;
+            var results = DbService.Instance.RunStoredProcedure(controlEvent.FunctionName, controlEvent.RunParams);           
+            return Utility.CreateResponseResults(results);
         }
     }
 }

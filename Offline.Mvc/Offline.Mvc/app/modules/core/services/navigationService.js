@@ -25,13 +25,17 @@
 
     function getMenuItems() {
         var eventName = "menu.load";
-        return context.getInstance().postRequest(eventName, createEvent(eventName, []));
+        var params = [];
+        params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>details</Name><Parent>table.menuGroup</Parent><Child>table1.menuGroup</Child></RelMapping></ArrayOfRelMapping>" });
+        //params.push({ name: "test", value: 1 });
+        //    params.push({ name: '(rename)', value: '<RelMapping><name>details</name><parent>table.menuGroup</parent><child>table1.menuGroup></child></RelMapping>' })
+        return context.getInstance().postRequest(eventName, createEvent(eventName, params));
     }
 
     function createEvent(eventName, parameters) {
         return {
             eventName: eventName,
-            parameters: parameters
+            runParams: parameters
         };
     }
     function goError() {

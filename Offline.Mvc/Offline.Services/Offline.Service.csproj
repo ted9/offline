@@ -52,15 +52,11 @@
       <Project>{bd150eab-699d-4fdc-a9ae-f76015b2fae2}</Project>
       <Name>Offline.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Offline.Models\Offline.Model.csproj">
-      <Project>{8e6f8e7a-bafb-4eb8-b392-3c19ffd55bf7}</Project>
-      <Name>Offline.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Offline.Service.Interface\Offline.Service.Interface.csproj">
       <Project>{83d394d2-3177-4136-950b-d8fbe034ce54}</Project>
       <Name>Offline.Service.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Offline.Utility\Offline.Core.csproj">
+    <ProjectReference Include="..\Offline.Core\Offline.Core.csproj">
       <Project>{2b95987f-7a8d-4438-808f-41d5318368d8}</Project>
       <Name>Offline.Core</Name>
     </ProjectReference>

@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Offline.Models\Offline.Model.csproj">
-      <Project>{8e6f8e7a-bafb-4eb8-b392-3c19ffd55bf7}</Project>
-      <Name>Offline.Model</Name>
+    <ProjectReference Include="..\Offline.Core\Offline.Core.csproj">
+      <Project>{2b95987f-7a8d-4438-808f-41d5318368d8}</Project>
+      <Name>Offline.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

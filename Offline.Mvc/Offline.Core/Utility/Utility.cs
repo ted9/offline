@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Offline.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -75,10 +76,33 @@ namespace Offline.Core
             return json;
         }
 
-        public static string DataSetToJson(DataSet ds)
+        public static List<ParameterObj> CreateResponseResults(List<Parameter> returnParams)
         {
+            var results = new List<ParameterObj>();
+            foreach (var param in returnParams)
+            {
+                if (param.Type.ToLower() == "dataset")
+                {
+                    DataSet ds = param.Value as DataSet ;
+                    results.AddRange(DataSetToResponseResult(ds));
+                }
+                else
+                {
+                    results.Add(new ParameterObj()
+                    {
+                        Name = param.Name,
+                        Type = param.Type, 
+                        Value = param.Value
+                    });
+                }
+            }
+            return results;
+        }
+
+        private static List<ParameterObj> DataSetToResponseResult(DataSet ds)
+        {
+            var results = new List<ParameterObj>();
             if (ds == null || ds.Tables.Count == 0) return null;
-            ds.Relations.Add(new DataRelation("Rel", ds.Tables[0].Columns["parentId"], ds.Tables[1].Columns["ParentId"]));
             var parentTables = new List<string>();
             var childTables = new List<string>();
             foreach (DataTable dt in ds.Tables)
@@ -96,27 +120,19 @@ namespace Offline.Core
             var sb = new StringBuilder();
             foreach (string tableName in parentTables)
             {
-                var dtJson = DataTableToJson(ds.Tables[tableName], 1, 10000);
-                //sb.Append(string.Format("[{\"{0}\":xxxx}],", tableName));
-                sb.Append("[{\"");
-                sb.Append(tableName);
-                sb.Append("\":");
-                sb.Append(dtJson);
-                sb.Append("}],");
+                var Json = DataTableToJson(ds.Tables[tableName], 1, 10000);
+                results.Add(new ParameterObj()
+                {
+                    Name = tableName,
+                    Type = "datatable",
+                    Value = Json
+                });
+
             }
-            sb.Remove(sb.Length - 1, 1);
-            var json = sb.ToString();
-            return json;
+            return results;
         }
 
-        public static string DataChildTableToJson(DataRow row, DataRelation relChild)
-        {
-            var dataRows = row.GetChildRows(relChild);
-            var childJson = DataRowsToJson(dataRows);
-            return childJson;
-        }
-
-        private static string DataRowsToJson(DataRow[] dataRows)
+        private static List<Dictionary<string, object>> DataRowsToList(DataRow[] dataRows)
         {
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;
@@ -130,14 +146,10 @@ namespace Offline.Core
                 }
                 rows.Add(row);
             }
-            var v = new ValueTable()
-            {
-                Data = rows
-            };
-            var result = ObjectToJson(v);
-            return result;
+            return rows;
+            
         }
-        public static string DataTableToJson(DataTable dt, int pageIndex, int pageSize)
+        public static TableValue DataTableToJson(DataTable dt, int pageIndex, int pageSize)
         {
             // pageIndex starts at 1
 
@@ -165,23 +177,24 @@ namespace Offline.Core
                     if (childRows.Length > 0)
                     {
 
-                        row.Add(rel.RelationName, DataRowsToJson(childRows));
+                        row.Add(rel.RelationName, DataRowsToList(childRows));
                     }
                 }
                 rows.Add(row);
             }
             // var json =  ObjectToJson(rows);
 
-            var v = new ValueTable()
+            var v = new TableValue()
             {
                 RowCount = dt.Rows.Count,
                 PageIndex = pageIndex,
                 PageSize = pageSize,
                 Data = rows
             };
+            return v;
             // var result = string.Format("{\"rowCount\":{0}, \"pageIndex\": {1}, \"pageSize\": {2}, \"data\": {3}", dt.Rows.Count, pageIndex , pageSize, json );
-            var result = ObjectToJson(v);
-            return result;
+            //var result = ObjectToJson(v);
+            //return result;
 
             #region old code
             //string colString = "\"{0}\":\"{1}\",";
@@ -228,7 +241,7 @@ namespace Offline.Core
         }
     }
 
-    public class ValueTable
+    public class TableValue
     {
         public int RowCount { get; set; }
         public int PageIndex { get; set; }

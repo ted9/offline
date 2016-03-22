@@ -9,6 +9,6 @@ namespace Offline.Service.Interface.Common
 {
     public interface IControlEventCommandService
     {
-        List<Parameter> ExecuteEvent(ControlEvent controlEvent);
+        List<ParameterObj> ExecuteEvent(ControlEvent controlEvent);
     }
 }

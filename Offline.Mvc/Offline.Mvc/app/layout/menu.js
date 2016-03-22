@@ -51,6 +51,13 @@
 
         navService.getMenuItems().then(function (data) {
             console.log(data);
+            var oo = JSON.parse('{ "name": "a" }');
+
+            var o = JSON.parse(data[0].Value);
+
+            var ooo = JSON.parse(o.data[0].details);
+
+
         });
 
         //return offlineHelper.isOffline().then(function (isOffline) {
