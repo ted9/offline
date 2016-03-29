@@ -13,7 +13,8 @@
         storeUrlHash: storeUrlHash,
         getCurrentUrlHashes: getCurrentUrlHashes,
         gotoErrorPage: gotoErrorPage,
-        getMenuItems: getMenuItems
+        getMenuItems: getMenuItems,
+        getModuleInfo: getModuleInfo
     };
 
     function navigateTo(route, force) {
@@ -22,19 +23,25 @@
             router.navigate(route);
         }
     }
+    function getModuleInfo() {
+        var eventName = "module.load";
+        var params = [];
+        params.push({ name: "(rename)", value: "<ArrayOfNameMapping><NameMapping><OldName>table</OldName><NewName>module</NewName></NameMapping><NameMapping><OldName>table1</OldName><NewName>control</NewName></NameMapping><NameMapping><OldName>table2</OldName><NewName>event</NewName></NameMapping></ArrayOfNameMapping>" });
+        params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>controls</Name><Parent>module.moduleId</Parent><Child>control.moduleId</Child></RelMapping><RelMapping><Name>events</Name><Parent>control.controlId</Parent><Child>event.controlId</Child></RelMapping></ArrayOfRelMapping>" });
+        return context.getInstance().postRequest(eventName, createEvent(eventName, params, "ModuleInfo_GET_P"));
+    }
 
     function getMenuItems() {
         var eventName = "menu.load";
         var params = [];
-        params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>details</Name><Parent>table.menuGroup</Parent><Child>table1.menuGroup</Child></RelMapping></ArrayOfRelMapping>" });
-        //params.push({ name: "test", value: 1 });
-        //    params.push({ name: '(rename)', value: '<RelMapping><name>details</name><parent>table.menuGroup</parent><child>table1.menuGroup></child></RelMapping>' })
-        return context.getInstance().postRequest(eventName, createEvent(eventName, params));
+      //  params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>details</Name><Parent>table.menuGroup</Parent><Child>table1.menuGroup</Child></RelMapping></ArrayOfRelMapping>" });
+        return context.getInstance().postRequest(eventName, createEvent(eventName, params, "Menu_GET_P"));
     }
 
-    function createEvent(eventName, parameters) {
+    function createEvent(eventName, parameters, functionName) {
         return {
             eventName: eventName,
+            functionName: functionName,
             runParams: parameters
         };
     }

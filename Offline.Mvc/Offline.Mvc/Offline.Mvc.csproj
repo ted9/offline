@@ -122,12 +122,19 @@
     <Content Include="app\config\appSettings.js" />
     <Content Include="app\config\navPageButtonType.js" />
     <Content Include="app\config\routes\about.js" />
+    <Content Include="app\config\routes\menu1.js" />
+    <Content Include="app\config\routes\menu2.js" />
+    <Content Include="app\config\routes\menu3.js" />
     <Content Include="app\layout\index.html" />
     <Content Include="app\layout\index.js" />
     <Content Include="app\layout\menu.html" />
     <Content Include="app\layout\menu.js" />
+    <Content Include="app\modules\common\base.html" />
+    <Content Include="app\modules\common\base.js" />
     <Content Include="app\modules\core\dataservices\amplifyDataContext.js" />
     <Content Include="app\modules\core\helper\deviceHelper.js" />
+    <Content Include="app\modules\core\helper\menuHelper.js" />
+    <Content Include="app\modules\core\helper\moduleInfoHelper.js" />
     <Content Include="app\modules\core\models\userProfile.js" />
     <Content Include="app\modules\core\helper\custombindingHelper.js" />
     <Content Include="app\modules\core\helper\i18nextLanguage.js" />
@@ -143,6 +150,8 @@
     <Content Include="app\requireSetup.js" />
     <Content Include="app\viewmodels\error.js" />
     <Content Include="app\views\error.html" />
+    <Content Include="app\widgets\common\menu\view.html" />
+    <Content Include="app\widgets\common\menu\viewmodel.js" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -632,6 +641,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\modules\common\viewmodels\" />
+    <Folder Include="app\modules\common\views\" />
+    <Folder Include="app\modules\menu1\" />
+    <Folder Include="app\modules\menu2\" />
+    <Folder Include="app\modules\menu3\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

@@ -10,12 +10,13 @@
     'modules/core/helper/deviceHelper',
     'languageHelper',
     'config/navPageButtonType',
-    'modules/core/services/navigationService'
+    'modules/core/services/navigationService',
+    'plugins/router'
     //'modules/core/helper/tourHelper',
     //'modules/core/helper/offlineHelper',
     //'modules/core/helper/amtSettingsDbHelper'
 ], function (app, widget, ko, config, hashFactory, uiHelper, logger, userProfileHelper,
-    deviceHelper, languageHelper, navPageButtonType, navService) {//, tourHelper, offlineHelper, SettingsDbHelper) {
+    deviceHelper, languageHelper, navPageButtonType, navService, router) {//, tourHelper, offlineHelper, SettingsDbHelper) {
     var keepModuleItem;
     var userProfile = {};
 
@@ -23,15 +24,29 @@
     var pageModel = {
         logoUrl: ko.observable(""),
         displayName: ko.observable(""),
-        modules: ko.observableArray([]),
+        modules: [], //ko.observableArray([]),
         activate: activate,
         onIconClick: onIconClick,
         jcarouselItems: ko.observableArray([]),
-        isOffline: ko.observable()
+        isOffline: ko.observable(),
+        getMenuItems: getMenuItems
     };
 
     return pageModel;
 
+    function getMenuItems() {
+        return pageModel.modules;
+    }
+    function getResponseJson(data, name) {
+        if (!name) name = "Table1";
+        if (data instanceof Array && data.length > 0) {
+            var result = _.find(data, function (item) {
+                return item.name === name;
+            });
+            return result.value;
+        }
+        return null;
+    }
     function activate() {
         userProfileHelper.clearEmployeeAuthentication();
         userProfile = userProfileHelper.getUserProfile();
@@ -50,14 +65,12 @@
         }
 
         navService.getMenuItems().then(function (data) {
-            console.log(data);
-            var oo = JSON.parse('{ "name": "a" }');
-
-            var o = JSON.parse(data[0].Value);
-
-            var ooo = JSON.parse(o.data[0].details);
-
-
+            pageModel.modules = [];
+            var result = getResponseJson(data);
+            _.each(result.data, function (item) {
+                pageModel.modules.push(item);
+            })
+            //pageModel.modules.push(result.Data);
         });
 
         //return offlineHelper.isOffline().then(function (isOffline) {

@@ -1,0 +1,10 @@
+﻿<div class="list-group">
+    <!-- ko foreach: menuItems-->
+    <a class="list-group-item" data-bind="click:$parent.onMenuItemClicked">
+        <span class="text" data-bind="text: menuName">xxxx</span>
+
+        <!--<span class="text" data-bind="attr:{'data-i18n':i18nTextKey}"></span>-->
+        <span class="glyphicon amtmobile-thrill-through" data-bind="attr:{ href: url}"></span>
+    </a>
+    <!-- /ko -->
+</div>

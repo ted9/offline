@@ -12,7 +12,12 @@
     'languageHelper',
     'modules/core/models/enums',
     'config/navPageButtonType',
-    'modules/core/helper/deviceHelper'
+    'modules/core/helper/deviceHelper',
+
+    'modules/core/services/navigationService',
+    'modules/core/helper/moduleinfoHelper',
+    'modules/core/helper/menuHelper',
+
     //'modules/timesheet/config/urlConfig',
     //'modules/core/helper/uiHelper',
     //'modules/core/models/appSettings',
@@ -26,7 +31,7 @@
     //'modules/core/helper/amtSettingsDbHelper',
     //'modules/core/helper/offlineHelper'
 ], function (router, app, $, ko, appConfig, hashFactory, history, datacontext, userProfileHelper,
-    logger, languageHelper, enums, navPageButtonType, deviceHelper) //, urlConfig,
+    logger, languageHelper, enums, navPageButtonType, deviceHelper, navService, moduleHelper, menuHelper) //, urlConfig,
   //  uiHelper, appSettings, exceptionRoutes, navigationService, moduleHelper, tourHelper, tourService, amtSettingsDbHelper, offlineHelper) {
    {
     "use strict";
@@ -141,8 +146,8 @@
             //logger.info("Tutorial: Load tutorial for page: {0}", instruction.config.moduleId);
             //tourHelper.load(instruction);
         });
-        //getAppSettings(function () {
-        //    getUserProfile(function () {
+        getModuleInfo(function () {
+            getMenuItems(function () {
                 buildRoutes(function () {
                     registerEventHandlers();
 
@@ -155,8 +160,14 @@
                         router.activate();
                     }
                 });
-        //    });
-        //});
+            });
+            //getAppSettings(function () {
+            //    getUserProfile(function () {
+  
+            //    });
+            //});
+
+        });
     }
 
     function loadAndSetModuleAsActive(callback) {
@@ -231,6 +242,42 @@
     }
 
     function compositionComplete() { }
+
+    function getModuleInfo(callback){
+        return navService.getModuleInfo().then(function (data) {
+            // saveAppSettingsObject(data);
+            moduleHelper.setModuleInfo(data);
+            if (callback) {
+                callback();
+            }
+           // amtSettingsDbHelper.saveSetting("appSettings", data);
+        });
+    }
+    function getMenuItems(callback) {
+        return navService.getMenuItems().then(function (data) {
+            var menus = [];
+            var result = getResponseJson(data);
+            _.each(result.data, function (item) {
+                menus.push(item);
+            })
+            menuHelper.setMenuItems(menus);
+            if (callback) {
+                callback();
+            }
+            //pageModel.modules.push(result.Data);
+        });
+    }
+   
+    function getResponseJson(data, name) {
+        if (!name) name = "Table1";
+        if (data instanceof Array && data.length > 0) {
+            var result = _.find(data, function (item) {
+                return item.name === name;
+            });
+            return result.value;
+        }
+        return null;
+    }
 
     function getAppSettings(callback) {
         //offlineHelper.isOffline().then(function (isOffline) {
@@ -413,31 +460,33 @@
                 //title: 'Error',
                 moduleId: 'viewmodels/error',
                 nav: true
-            }, {
+            },
+
+            {
                 route: 'notfound',
                 //title: 'Not Found',
-                moduleId: 'viewmodels/notfound',
+                moduleId: 'modules/common/base',
                 nav: true
             }
         ];
 
-        //var userprofile = userProfileHelper.getUserProfile();
+        var menus = menuHelper.getMenuItems();
 
         //onSwitchLanguageClick(userprofile.language);
 
-        //var routeConfigUrls = [];
-        //for (var i = 0; i < userprofile.modules.length; i++) {
-        //    var module = userprofile.modules[i];
-        //    var url = String.format("config/routes/{0}", module.id);
-        //    routeConfigUrls.push(url);
-        //}
+        var routeConfigUrls = [];
+        for (var i = 0; i < menus.length; i++) {
+            var module = menus[i];
+            var url = String.format("config/routes/{0}", module.menuName);
+            routeConfigUrls.push(url);
+        }
 
-        //require(routeConfigUrls, function () {
-        //    for (var i = 0; i < arguments.length; i++) {
-        //        for (var j = 0; j < arguments[i].length; j++) {
-        //            routes.push(arguments[i][j]);
-        //        }
-        //    }
+        require(routeConfigUrls, function () {
+            for (var i = 0; i < arguments.length; i++) {
+                for (var j = 0; j < arguments[i].length; j++) {
+                    routes.push(arguments[i][j]);
+                }
+            }
             router.map(routes)
                 .buildNavigationModel()
                 .mapUnknownRoutes("viewmodels/error");
@@ -445,7 +494,7 @@
             if (callback) {
                 callback();
             }
-        //});
+        });
     }
 
     function onHomeLeftClicked() {

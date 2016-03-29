@@ -114,10 +114,9 @@ namespace Offline.Core
                 if (parentTables.Contains(rel.ChildTable.TableName))
                 {
                     parentTables.Remove(rel.ChildTable.TableName);
-                }
-              
+                }            
             }
-            var sb = new StringBuilder();
+           
             foreach (string tableName in parentTables)
             {
                 var Json = DataTableToJson(ds.Tables[tableName], 1, 10000);
@@ -132,27 +131,60 @@ namespace Offline.Core
             return results;
         }
 
-        private static List<Dictionary<string, object>> DataRowsToList(DataRow[] dataRows)
+        private static List<Dictionary<string, object>> DataRowsToList(DataRow[] dataRows, DataSet ds)
         {
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;
             for (var i = 0; i < dataRows.Length; i++)
             {
                 var dr = dataRows[i];
+                var dt = dr.Table;
                 row = new Dictionary<string, object>();
                 foreach (DataColumn col in dr.Table.Columns)
                 {
                     row.Add(col.ColumnName.Replace(" ", "").Replace(".", "_"), dr[col]);
                 }
+                foreach (DataRelation rel in ds.Relations)
+                {
+                    if (rel.ParentTable.TableName == dt.TableName)
+                    {
+                        var childRows = dr.GetChildRows(rel);
+                        if (childRows.Length > 0)
+                        {
+                            row.Add(rel.RelationName, DataRowsToList(childRows, ds));
+                        }
+                    }
+                }
                 rows.Add(row);
             }
             return rows;
-            
         }
+        //public static Dictionary<string, object> DataRowToObject222(DataRow dataRow, DataSet ds)
+        //{
+        //    Dictionary<string, object> row = new Dictionary<string, object>();
+        //    DataTable dt = dataRow.Table;
+        //    foreach (DataColumn col in dt.Columns)
+        //    {
+        //        row.Add(col.ColumnName.Replace(" ", "").Replace(".", "_"), dataRow[col]);
+        //    }
+        //    foreach (DataRelation rel in ds.Relations)
+        //    {
+        //        if (rel.ParentTable.TableName == dt.TableName)
+        //        {
+        //            var childRows = dataRow.GetChildRows(rel);
+        //            if (childRows.Length > 0)
+        //            {
+        //                row.Add(rel.RelationName, DataRowsToList(childRows, ds));
+        //            }
+        //        }
+        //    }
+        //    return row;
+        //}
         public static TableValue DataTableToJson(DataTable dt, int pageIndex, int pageSize)
         {
             // pageIndex starts at 1
-
+            if (pageIndex == 0) pageIndex = 1;
+            if (pageSize == 0) pageSize = dt.Rows.Count;
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;
 
@@ -162,28 +194,23 @@ namespace Offline.Core
                 row = new Dictionary<string, object>();
                 foreach (DataColumn col in dt.Columns)
                 {
-                    //var colValue = dr[col].ToString();
-                    //if (colValue.Split('<').Length > 4 && colValue.Split('>').Length == colValue.Split('<').Length)
-                    //{
-
-                    //}
-                    //else
                     row.Add(col.ColumnName.Replace(" ", "").Replace(".", "_"), dr[col]);
                 }
                 
                 foreach (DataRelation rel in dt.DataSet.Relations)
                 {
-                    var childRows = dr.GetChildRows(rel);
-                    if (childRows.Length > 0)
+                    if (rel.ParentTable.TableName == dt.TableName)
                     {
-
-                        row.Add(rel.RelationName, DataRowsToList(childRows));
+                        var childRows = dr.GetChildRows(rel);
+                        if (childRows.Length > 0)
+                        {
+                            row.Add(rel.RelationName, DataRowsToList(childRows, dt.DataSet));
+                        }
                     }
                 }
                 rows.Add(row);
             }
-            // var json =  ObjectToJson(rows);
-
+ 
             var v = new TableValue()
             {
                 RowCount = dt.Rows.Count,
@@ -192,9 +219,7 @@ namespace Offline.Core
                 Data = rows
             };
             return v;
-            // var result = string.Format("{\"rowCount\":{0}, \"pageIndex\": {1}, \"pageSize\": {2}, \"data\": {3}", dt.Rows.Count, pageIndex , pageSize, json );
-            //var result = ObjectToJson(v);
-            //return result;
+          
 
             #region old code
             //string colString = "\"{0}\":\"{1}\",";
