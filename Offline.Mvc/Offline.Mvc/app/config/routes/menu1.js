@@ -1,10 +1,10 @@
 ﻿define([], function () {
     var routes = [
         {
-            route: "menu1/menu1items",
+            route: "menu1",
             title: "Select Customer",
             moduleName: "menu1Items",
-            moduleId: "modules/customers/viewmodels/selectCustomer"
+            moduleId: "modules/menu1/load"
         },
          {
              route: "menu1/menu11items",
