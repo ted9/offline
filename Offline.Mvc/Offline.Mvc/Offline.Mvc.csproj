@@ -147,6 +147,8 @@
     <Content Include="app\modules\core\models\enums.js" />
     <Content Include="app\modules\core\services\hash.js" />
     <Content Include="app\modules\core\services\navigationService.js" />
+    <Content Include="app\modules\menu1\viewmodels\load.js" />
+    <Content Include="app\modules\menu1\views\load.html" />
     <Content Include="app\requireSetup.js" />
     <Content Include="app\viewmodels\error.js" />
     <Content Include="app\views\error.html" />
@@ -643,7 +645,6 @@
   <ItemGroup>
     <Folder Include="app\modules\common\viewmodels\" />
     <Folder Include="app\modules\common\views\" />
-    <Folder Include="app\modules\menu1\load\" />
     <Folder Include="app\modules\menu2\" />
     <Folder Include="app\modules\menu3\" />
     <Folder Include="App_Data\" />
