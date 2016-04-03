@@ -3,9 +3,8 @@
         {
             route: "menu1",
             title: "Select Customer",
-            moduleName: "menu1Items",
-            moduleId: "modules/menu1/viewmodels/load",
-            test:"ppp"
+            moduleName: "load",
+            moduleId: "modules/menu1/viewmodels/load"
         },
          {
              route: "menu1/menu11items",

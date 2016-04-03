@@ -1,1 +1,36 @@
-﻿<div>test</div>
+﻿
+<div class="page-navigation">
+    <a class="glyphicon amtmobile-navigation-back" data-bind="click:onLeftNavigateClicked"></a>
+    <span class="caption truncate" data-bind="text: getPageHeading"></span>
+</div>
+
+<div class="page-toolbar">
+    <form class="form form-horizontal" role="form">
+        <div class="form-group">
+            <div class="toolbar-item-right">
+                <button class="btn btn-default" data-i18n="common:string.cancel" data-bind="click: onCancelClicked"></button>
+                <button class="btn btn-primary" data-i18n="widget:addOrEditDefect.saveAndClose" data-bind="click: saveDefectItem, disable: isDisableSaveButton"></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="page-content tablet">
+    
+    <form class="form form-horizontal" data-bind="foreach:controls">
+        <div data-bind="text: $parents[0].id">aaaaaaaa</div>
+            <!-- ko if: ($data.controlType === 'select2') -->
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <label class="control-label" data-bind="text: $data.caption">test</label>
+                    <div class="control-value-container">
+                        <input class="form-control" data-i18n="[placeholder]widget:select2PlaceHolder.defect_theAsset" maxlength="30" tabindex="1"
+                               data-bind="select2: { source: 'service/api/offline/menu', controlEvent: $parents[0].getControlEvent($data.events),  optionsValue: 'key', optionsText: 'name', selectedValue: $parents[0][$data.fieldName], selectedText: $parents[0][$data.fieldName+'_text'], hasError: false, errorClass: 'has-error' }" />
+                    </div>
+                </div>
+            </div>
+            <!--/ko-->
+
+    </form>
+</div>
+

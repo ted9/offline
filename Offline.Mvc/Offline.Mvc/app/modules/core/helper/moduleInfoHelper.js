@@ -9,7 +9,8 @@
         amplifyKey: '_moduleInfo',
         getModuleInfo: getModuleInfo,
         setModuleInfo: setModuleInfo,       
-        cleanModuleInfo: cleanModuleInfo
+        cleanModuleInfo: cleanModuleInfo,
+        getModuleInfoItem: getModuleInfoItem
     };
     return helper;
 
@@ -23,6 +24,17 @@
         return data;
     }
 
+    function getModuleInfoItem(moduleName) {
+        var data = sessionStorageHelper.getItem(helper.amplifyKey);
+        var modules = data[0].value.data;
+        if (modules && modules instanceof Array) {
+            return _.find(modules, function (item) {
+                return item.moduleName.toLowerCase() == moduleName.toLowerCase();
+            });
+        }
+        return null;
+    }
+    
     function setModuleInfo(data) {
       
         sessionStorageHelper.setItem(helper.amplifyKey, data);

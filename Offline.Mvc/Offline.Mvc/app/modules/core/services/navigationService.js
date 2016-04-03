@@ -26,8 +26,8 @@
     function getModuleInfo() {
         var eventName = "module.load";
         var params = [];
-        params.push({ name: "(rename)", value: "<ArrayOfNameMapping><NameMapping><OldName>table</OldName><NewName>module</NewName></NameMapping><NameMapping><OldName>table1</OldName><NewName>control</NewName></NameMapping><NameMapping><OldName>table2</OldName><NewName>event</NewName></NameMapping></ArrayOfNameMapping>" });
-        params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>controls</Name><Parent>module.moduleId</Parent><Child>control.moduleId</Child></RelMapping><RelMapping><Name>events</Name><Parent>control.controlId</Parent><Child>event.controlId</Child></RelMapping></ArrayOfRelMapping>" });
+        params.push({ name: "(rename)", value: "<ArrayOfNameMapping><NameMapping><OldName>table</OldName><NewName>module</NewName></NameMapping><NameMapping><OldName>table1</OldName><NewName>control</NewName></NameMapping><NameMapping><OldName>table2</OldName><NewName>event</NewName></NameMapping><NameMapping><OldName>table3</OldName><NewName>param</NewName></NameMapping></ArrayOfNameMapping>" });
+        params.push({ name: "(relation)", value: "<ArrayOfRelMapping><RelMapping><Name>controls</Name><Parent>module.moduleId</Parent><Child>control.moduleId</Child></RelMapping><RelMapping><Name>events</Name><Parent>control.controlId</Parent><Child>event.controlId</Child></RelMapping><RelMapping><Name>eventParams</Name><Parent>event.eventId</Parent><Child>param.eventId</Child></RelMapping></ArrayOfRelMapping>" });
         return context.getInstance().postRequest(eventName, createEvent(eventName, params, "ModuleInfo_GET_P"));
     }
 
